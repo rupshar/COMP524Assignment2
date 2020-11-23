@@ -1,0 +1,31 @@
+<Events startTimestamp="1601363125149" logVersion="1.0.0.202008151525">
+  <Command __id="0" _type="DiffBasedFileOpenCommand" date="Tue Sep 29 00:05:25 PDT 2020" docASTNodeCount="60" docActiveCodeLength="526" docExpressionCount="38" docLength="694" projectName="Assignment2Tests" starttimestamp="1601363125149" timestamp="160">
+    <filePath><![CDATA[/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2Tests/src/test/RunF20A2Tests.java]]></filePath>
+    <diff><![CDATA[null]]></diff>
+    <snapshot><![CDATA[package test;
+
+import gradingTools.comp524f20.assignment2.F20Assignment2Suite;
+import grader.basics.execution.prolog.PrologCommandGeneratorSelector;
+//import trace.grader.basics.GraderBasicsTraceUtility;
+//import util.trace.Tracer;
+
+public class RunF20A2Tests {
+	static final String PROJECT_LOCATION = "/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2";
+	public static void main (String[] args) {
+//		Tracer.showInfo(true);
+//		GraderBasicsTraceUtility.setBufferTracedMessages(false);	
+		F20Assignment2Suite.setProjectLocation(PROJECT_LOCATION);
+		PrologCommandGeneratorSelector.getCommandGenerator().setUserBinary("/usr/local/bin/swipl");
+		F20Assignment2Suite.main(args);
+	}
+}
+
+]]></snapshot>
+  </Command>
+  <Command __id="1" _type="MoveCaretCommand" caretOffset="624" date="Tue Sep 29 00:05:25 PDT 2020" docOffset="694" starttimestamp="1601363125149" timestamp="464" />
+  <Command __id="3" _type="MoveCaretCommand" caretOffset="213" date="Tue Sep 29 00:05:29 PDT 2020" docOffset="213" starttimestamp="1601363125149" timestamp="4143" />
+  <Command __id="4" _type="ShellCommand" date="Tue Sep 29 00:05:42 PDT 2020" starttimestamp="1601363125149" timestamp="16916" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="450" _type="ShellCommand" date="Tue Sep 29 22:12:36 PDT 2020" starttimestamp="1601363125149" timestamp="79631116" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="451" _type="EclipseCommand" commandID="org.eclipse.ui.file.properties" date="Tue Sep 29 22:12:36 PDT 2020" starttimestamp="1601363125149" timestamp="79631151" />
+  <Command __id="452" _type="ShellCommand" date="Tue Sep 29 22:13:13 PDT 2020" starttimestamp="1601363125149" timestamp="79668074" type="ECLIPSE_LOST_FOCUS" />
+</Events>

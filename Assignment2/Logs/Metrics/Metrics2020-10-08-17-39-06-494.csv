@@ -1,0 +1,7 @@
+Id,Prediction,Date,File,StartTime,ElapsedTime,BusyTime,Commands,editOrInsertPercentage,debugPercentage,navigationPercentage,focusPercentage,removePercentage,editPercentage,COMMAND_RATE,NAVIGATION_RATE,DEBUG_RATE,FOCUS_RATE,EDIT_RATE,REMOVE_RATE,INSERT_RATE,webLinkTimes,Web Page Visits
+1,,Thu Oct 08 17:39:29 PDT 2020,SocialDistance.pl,1602203969262,1,1,(I)25,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,null,0.0,0.0,[]
+,/modelData/A0UserStudy2010.arff,Thu Oct 08 17:39:29 PDT 2020,SocialDistance.pl, 1602203969262
+2,,Thu Oct 08 17:39:29 PDT 2020,SocialDistance.pl,1602203969410,4423,4423,(I)25,1.0,0.0,0.0,0.0,0.0,0.0,6.25,0.0,0.0,0.0,0.0,0.0,6.25,0.0,[]
+3,,Thu Oct 08 17:39:33 PDT 2020,SocialDistance.pl,1602203973834,4829,4829,(I)19(R)2(I)4,0.92,0.0,0.0,0.0,0.0,0.0,6.25,0.0,0.0,0.0,0.0,0.5,5.75,0.0,[]
+4,,Thu Oct 08 17:39:38 PDT 2020,SocialDistance.pl,1602203978839,1,1,(I)8(R)3(I)7(R)2(I)5,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,null,0.0,0.0,[]
+5,,Thu Oct 08 17:39:39 PDT 2020,SocialDistance.pl,1602203979314,34216,0,(I)7(R)3(I)7,0.8235294117647058,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.08823529411764706,0.4117647058823529,0.0,[]

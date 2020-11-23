@@ -1,0 +1,15 @@
+<Events startTimestamp="1601313535525" logVersion="1.0.0.202008151525">
+  <Command __id="208" _type="DiffBasedFileOpenCommand" date="Mon Sep 28 12:23:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="52" docExpressionCount="0" docLength="52" projectName="Assignment0-2" starttimestamp="1601313535525" timestamp="7446079">
+    <filePath><![CDATA[/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment0-2/src/Greeting.pl]]></filePath>
+    <diff><![CDATA[null]]></diff>
+    <snapshot><![CDATA[greeting() :-
+	write('hello\n'), write('goodbye\n').]]></snapshot>
+  </Command>
+  <Command __id="209" _type="MoveCaretCommand" caretOffset="0" date="Mon Sep 28 12:23:01 PDT 2020" docOffset="0" starttimestamp="1601313535525" timestamp="7446268" />
+  <Command __id="211" _type="MoveCaretCommand" caretOffset="0" date="Mon Sep 28 12:23:02 PDT 2020" docOffset="0" starttimestamp="1601313535525" timestamp="7447049" />
+  <Command __id="212" _type="ShellCommand" date="Mon Sep 28 12:23:04 PDT 2020" starttimestamp="1601313535525" timestamp="7448732" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="213" _type="ShellCommand" date="Mon Sep 28 13:22:37 PDT 2020" starttimestamp="1601313535525" timestamp="11021800" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="214" _type="ShellCommand" date="Mon Sep 28 13:22:39 PDT 2020" starttimestamp="1601313535525" timestamp="11023654" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="215" _type="ShellCommand" date="Mon Sep 28 13:54:48 PDT 2020" starttimestamp="1601313535525" timestamp="12952991" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="216" _type="ShellCommand" date="Mon Sep 28 13:54:57 PDT 2020" starttimestamp="1601313535525" timestamp="12961861" type="ECLIPSE_LOST_FOCUS" />
+</Events>

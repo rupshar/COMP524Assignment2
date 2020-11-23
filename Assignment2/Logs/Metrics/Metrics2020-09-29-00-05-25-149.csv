@@ -1,0 +1,2 @@
+Id,Prediction,Date,File,StartTime,ElapsedTime,BusyTime,Commands,editOrInsertPercentage,debugPercentage,navigationPercentage,focusPercentage,removePercentage,editPercentage,COMMAND_RATE,NAVIGATION_RATE,DEBUG_RATE,FOCUS_RATE,EDIT_RATE,REMOVE_RATE,INSERT_RATE,webLinkTimes,Web Page Visits
+16,,Tue Sep 29 22:09:08 PDT 2020,Double.pl,1601442548308,207957,0,(I)2(F)16,0.1111111111111111,0.0,0.0,88.88888888888889,0.0,0.0,0.08695652173913043,0.0,0.0,0.07729468599033816,0.0,0.0,0.00966183574879227,0.0,[]

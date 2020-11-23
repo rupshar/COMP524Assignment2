@@ -1,0 +1,6 @@
+<Events startTimestamp="1601313489289" logVersion="1.0.0.202009141527">
+  <Command __id="1" _type="ShellCommand" date="Mon Sep 28 10:18:25 PDT 2020" starttimestamp="1601313489289" timestamp="16230" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="2" _type="ShellCommand" date="Mon Sep 28 10:18:38 PDT 2020" starttimestamp="1601313489289" timestamp="29169" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="3" _type="ShellCommand" date="Mon Sep 28 10:18:40 PDT 2020" starttimestamp="1601313489289" timestamp="30735" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="4" _type="ShellCommand" date="Mon Sep 28 10:18:40 PDT 2020" starttimestamp="1601313489289" timestamp="30798" type="ECLIPSE_LOST_FOCUS" />
+</Events>

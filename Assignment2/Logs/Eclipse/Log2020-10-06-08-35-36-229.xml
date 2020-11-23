@@ -1,0 +1,2239 @@
+<Events startTimestamp="1601998536229" logVersion="1.0.0.202008151525">
+  <Command __id="1" _type="MoveCaretCommand" caretOffset="703" date="Tue Oct 06 08:35:36 PDT 2020" docOffset="703" starttimestamp="1601998536229" timestamp="629" />
+  <Command __id="2" _type="ShellCommand" date="Tue Oct 06 08:35:45 PDT 2020" starttimestamp="1601998536229" timestamp="8782" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="3" _type="ShellCommand" date="Tue Oct 06 08:35:59 PDT 2020" starttimestamp="1601998536229" timestamp="23600" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="4" _type="MoveCaretCommand" caretOffset="592" date="Tue Oct 06 08:36:00 PDT 2020" docOffset="592" starttimestamp="1601998536229" timestamp="24048" />
+  <Command __id="5" _type="ShellCommand" date="Tue Oct 06 08:36:09 PDT 2020" starttimestamp="1601998536229" timestamp="33663" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="6" _type="ShellCommand" date="Tue Oct 06 08:41:16 PDT 2020" starttimestamp="1601998536229" timestamp="340127" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="7" _type="MoveCaretCommand" caretOffset="501" date="Tue Oct 06 08:41:16 PDT 2020" docOffset="501" starttimestamp="1601998536229" timestamp="340429" />
+  <Command __id="8" _type="MoveCaretCommand" caretOffset="1811" date="Tue Oct 06 08:41:20 PDT 2020" docOffset="1811" starttimestamp="1601998536229" timestamp="344410" />
+  <Command __id="10" _type="InsertStringCommand" date="Tue Oct 06 08:41:21 PDT 2020" starttimestamp="1601998536229" timestamp="345370" timestamp2="345370">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="12" _type="InsertStringCommand" date="Tue Oct 06 08:41:21 PDT 2020" starttimestamp="1601998536229" timestamp="345449" timestamp2="345449">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="14" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:41:22 PDT 2020" starttimestamp="1601998536229" timestamp="345881" />
+  <Command __id="15" _type="ShellCommand" date="Tue Oct 06 08:41:24 PDT 2020" starttimestamp="1601998536229" timestamp="348056" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="0" _type="DiffBasedFileOpenCommand" date="Tue Oct 06 08:35:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1818" docExpressionCount="0" docLength="1818" projectName="Assignment2" starttimestamp="1601998536229" timestamp="513">
+    <filePath><![CDATA[/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl]]></filePath>
+    <diff><![CDATA[null]]></diff>
+    <snapshot><![CDATA[givenSafe(13,30,30).
+givenSafe(6,30,10).
+givenSafe(27,30,50).
+givenSafe(13,15,50).
+givenSafe(13,120,10).
+givenSafe(27,120,30).
+givenSafe(6,15,30).
+
+givenSizes(6,15,10).
+givenSizes(13,30,30).
+givenSizes(27,120,50).
+
+lowInterpolation(Value, Low, Med, High, InterpolatedValue) :-
+	Value >= High,
+	InterpolatedValue is High;
+	Value < Low,
+	InterPolatedValue is 0;
+	Value >= Low, Value < Med,
+	InterpolatedValue is Low;
+	Value >= Med, Value < High,
+	InterpolatedValue is Med.
+	
+highInterpolation(Value, Low, Med, High, InterpolatedValue) :-
+	Value > High,
+	InterpolatedValue is 200;
+	Value =< Low,
+	InterpolatedValue is Low;
+	Value > Low, Value =< Med,
+	InterpolatedValue is Med;
+	Value > Med, Value =< High,
+	InterpolatedValue is High.
+
+interpolatedSafe(Distance, Duration, Exhalation) :-
+	lowInterpolation(Distance, 6, 13, 27, InterpolatedDistance),
+	highInterpolation(Duration, 15, 30, 120, InterpolatedDuration),
+	highInterpolation(Exhalation, 10, 30, 50, InterpolatedExhalation),
+	givenSafe(InterpolatedDistance,InterpolatedDuration,InterpolatedExhalation).
+	
+interpolatedSafe(Distance, Duration) :-
+	interpolatedSafe(Distance, Duration, 30).
+	
+interpolatedSafe(Distance) :-
+	interpolatedSafe(Distance, 30, 30).
+
+derivedSafe(Distance, Duration, Exhalation) :-
+	Distance >= 13, Duration =< 30, Exhalation =< 30;
+	Distance >= 6, Duration =< 30, Exhalation =< 10;
+	Distance >= 27, Duration =< 30, Exhalation =< 50;
+	Distance >= 13, Duration =< 15, Exhalation =< 50;
+	Distance >= 13, Duration =< 120, Exhalation =< 10;
+	Distance >= 27, Duration =< 120, Exhalation =< 30;
+	Distance >= 6, Duration =< 15, Exhalation =< 30.
+	
+generateSafeDistancesAndDurations(Distance, Duration, Exhalation) :-
+	highInterpolation(Exhalation, 10, 30, 50, InterpolatedExhalation),
+	givenSafe(Distance, Duration, InterpolatedExhalation).
+
+
+
+	
+	]]></snapshot>
+  </Command>
+  <DocumentChange __id="9" _type="Insert" date="Tue Oct 06 08:41:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1820" docExpressionCount="0" docLength="1820" length="2" offset="1811" starttimestamp="1601998536229" timestamp="345354">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="11" _type="Insert" date="Tue Oct 06 08:41:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1822" docExpressionCount="0" docLength="1822" length="2" offset="1813" starttimestamp="1601998536229" timestamp="345446">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="13" _type="Delete" date="Tue Oct 06 08:41:22 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1821" docExpressionCount="0" docLength="1821" endLine="57" length="1" offset="1814" startLine="57" starttimestamp="1601998536229" timestamp="345858">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="18" _type="Insert" date="Tue Oct 06 08:41:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1822" docExpressionCount="0" docLength="1822" length="1" offset="1814" starttimestamp="1601998536229" timestamp="354116">
+    <text><![CDATA[g]]></text>
+  </DocumentChange>
+  <DocumentChange __id="20" _type="Insert" date="Tue Oct 06 08:41:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1823" docExpressionCount="0" docLength="1823" length="1" offset="1815" starttimestamp="1601998536229" timestamp="354224">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <DocumentChange __id="22" _type="Insert" date="Tue Oct 06 08:41:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1824" docExpressionCount="0" docLength="1824" length="1" offset="1816" starttimestamp="1601998536229" timestamp="354355">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <DocumentChange __id="24" _type="Insert" date="Tue Oct 06 08:41:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1825" docExpressionCount="0" docLength="1825" length="1" offset="1817" starttimestamp="1601998536229" timestamp="354530">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <DocumentChange __id="26" _type="Insert" date="Tue Oct 06 08:41:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1826" docExpressionCount="0" docLength="1826" length="1" offset="1818" starttimestamp="1601998536229" timestamp="354623">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <DocumentChange __id="28" _type="Insert" date="Tue Oct 06 08:41:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1827" docExpressionCount="0" docLength="1827" length="1" offset="1819" starttimestamp="1601998536229" timestamp="355663">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <DocumentChange __id="30" _type="Insert" date="Tue Oct 06 08:41:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1828" docExpressionCount="0" docLength="1828" length="1" offset="1820" starttimestamp="1601998536229" timestamp="355887">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <DocumentChange __id="32" _type="Insert" date="Tue Oct 06 08:41:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1829" docExpressionCount="0" docLength="1829" length="1" offset="1821" starttimestamp="1601998536229" timestamp="356008">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <DocumentChange __id="34" _type="Insert" date="Tue Oct 06 08:41:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1830" docExpressionCount="0" docLength="1830" length="1" offset="1822" starttimestamp="1601998536229" timestamp="356121">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <DocumentChange __id="36" _type="Insert" date="Tue Oct 06 08:41:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1831" docExpressionCount="0" docLength="1831" length="1" offset="1823" starttimestamp="1601998536229" timestamp="356727">
+    <text><![CDATA[V]]></text>
+  </DocumentChange>
+  <DocumentChange __id="38" _type="Insert" date="Tue Oct 06 08:41:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1832" docExpressionCount="0" docLength="1832" length="1" offset="1824" starttimestamp="1601998536229" timestamp="356908">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <DocumentChange __id="40" _type="Insert" date="Tue Oct 06 08:41:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1833" docExpressionCount="0" docLength="1833" length="1" offset="1825" starttimestamp="1601998536229" timestamp="357056">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <DocumentChange __id="42" _type="Insert" date="Tue Oct 06 08:41:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1834" docExpressionCount="0" docLength="1834" length="1" offset="1826" starttimestamp="1601998536229" timestamp="357543">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <DocumentChange __id="44" _type="Insert" date="Tue Oct 06 08:41:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1835" docExpressionCount="0" docLength="1835" length="1" offset="1827" starttimestamp="1601998536229" timestamp="357647">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <DocumentChange __id="46" _type="Insert" date="Tue Oct 06 08:41:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1836" docExpressionCount="0" docLength="1836" length="1" offset="1828" starttimestamp="1601998536229" timestamp="357741">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <DocumentChange __id="48" _type="Insert" date="Tue Oct 06 08:41:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1837" docExpressionCount="0" docLength="1837" length="1" offset="1829" starttimestamp="1601998536229" timestamp="358309">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <DocumentChange __id="50" _type="Insert" date="Tue Oct 06 08:41:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1838" docExpressionCount="0" docLength="1838" length="1" offset="1830" starttimestamp="1601998536229" timestamp="358804">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <DocumentChange __id="52" _type="Insert" date="Tue Oct 06 08:41:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1839" docExpressionCount="0" docLength="1839" length="1" offset="1831" starttimestamp="1601998536229" timestamp="359134">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <DocumentChange __id="54" _type="Delete" date="Tue Oct 06 08:41:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1838" docExpressionCount="0" docLength="1838" endLine="58" length="1" offset="1831" startLine="58" starttimestamp="1601998536229" timestamp="359583">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <DocumentChange __id="56" _type="Delete" date="Tue Oct 06 08:41:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1837" docExpressionCount="0" docLength="1837" endLine="58" length="1" offset="1830" startLine="57" starttimestamp="1601998536229" timestamp="360121">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <Command __id="16" _type="ShellCommand" date="Tue Oct 06 08:41:29 PDT 2020" starttimestamp="1601998536229" timestamp="353292" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="17" _type="MoveCaretCommand" caretOffset="1814" date="Tue Oct 06 08:41:29 PDT 2020" docOffset="1814" starttimestamp="1601998536229" timestamp="353408" />
+  <Command __id="19" _type="InsertStringCommand" date="Tue Oct 06 08:41:30 PDT 2020" starttimestamp="1601998536229" timestamp="354117" timestamp2="354117">
+    <data><![CDATA[g]]></data>
+  </Command>
+  <Command __id="21" _type="InsertStringCommand" date="Tue Oct 06 08:41:30 PDT 2020" starttimestamp="1601998536229" timestamp="354225" timestamp2="354225">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <Command __id="23" _type="InsertStringCommand" date="Tue Oct 06 08:41:30 PDT 2020" starttimestamp="1601998536229" timestamp="354356" timestamp2="354356">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <Command __id="25" _type="InsertStringCommand" date="Tue Oct 06 08:41:30 PDT 2020" starttimestamp="1601998536229" timestamp="354531" timestamp2="354531">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <Command __id="27" _type="InsertStringCommand" date="Tue Oct 06 08:41:30 PDT 2020" starttimestamp="1601998536229" timestamp="354624" timestamp2="354624">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <Command __id="29" _type="InsertStringCommand" date="Tue Oct 06 08:41:31 PDT 2020" starttimestamp="1601998536229" timestamp="355665" timestamp2="355665">
+    <data><![CDATA[S]]></data>
+  </Command>
+  <Command __id="31" _type="InsertStringCommand" date="Tue Oct 06 08:41:32 PDT 2020" starttimestamp="1601998536229" timestamp="355888" timestamp2="355888">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <Command __id="33" _type="InsertStringCommand" date="Tue Oct 06 08:41:32 PDT 2020" starttimestamp="1601998536229" timestamp="356009" timestamp2="356009">
+    <data><![CDATA[f]]></data>
+  </Command>
+  <Command __id="35" _type="InsertStringCommand" date="Tue Oct 06 08:41:32 PDT 2020" starttimestamp="1601998536229" timestamp="356122" timestamp2="356122">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <Command __id="37" _type="InsertStringCommand" date="Tue Oct 06 08:41:32 PDT 2020" starttimestamp="1601998536229" timestamp="356730" timestamp2="356730">
+    <data><![CDATA[V]]></data>
+  </Command>
+  <Command __id="39" _type="InsertStringCommand" date="Tue Oct 06 08:41:33 PDT 2020" starttimestamp="1601998536229" timestamp="356909" timestamp2="356909">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <Command __id="41" _type="InsertStringCommand" date="Tue Oct 06 08:41:33 PDT 2020" starttimestamp="1601998536229" timestamp="357058" timestamp2="357058">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <Command __id="43" _type="InsertStringCommand" date="Tue Oct 06 08:41:33 PDT 2020" starttimestamp="1601998536229" timestamp="357545" timestamp2="357545">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <Command __id="45" _type="InsertStringCommand" date="Tue Oct 06 08:41:33 PDT 2020" starttimestamp="1601998536229" timestamp="357648" timestamp2="357648">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <Command __id="47" _type="InsertStringCommand" date="Tue Oct 06 08:41:33 PDT 2020" starttimestamp="1601998536229" timestamp="357742" timestamp2="357742">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <Command __id="49" _type="InsertStringCommand" date="Tue Oct 06 08:41:34 PDT 2020" starttimestamp="1601998536229" timestamp="358312" timestamp2="358312">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <Command __id="51" _type="InsertStringCommand" date="Tue Oct 06 08:41:35 PDT 2020" starttimestamp="1601998536229" timestamp="358807" timestamp2="358807">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="53" _type="InsertStringCommand" date="Tue Oct 06 08:41:35 PDT 2020" starttimestamp="1601998536229" timestamp="359135" timestamp2="359135">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <Command __id="55" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:41:35 PDT 2020" starttimestamp="1601998536229" timestamp="359586" />
+  <Command __id="57" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:41:36 PDT 2020" starttimestamp="1601998536229" timestamp="360131" />
+  <Command __id="59" _type="InsertStringCommand" date="Tue Oct 06 08:41:37 PDT 2020" starttimestamp="1601998536229" timestamp="361187" timestamp2="361187">
+    <data><![CDATA[)]]></data>
+  </Command>
+  <Command __id="60" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.COLUMN_PREVIOUS" date="Tue Oct 06 08:41:37 PDT 2020" starttimestamp="1601998536229" timestamp="361749" />
+  <DocumentChange __id="58" _type="Insert" date="Tue Oct 06 08:41:37 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1838" docExpressionCount="0" docLength="1838" length="1" offset="1830" starttimestamp="1601998536229" timestamp="361183">
+    <text><![CDATA[)]]></text>
+  </DocumentChange>
+  <DocumentChange __id="61" _type="Insert" date="Tue Oct 06 08:41:38 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1839" docExpressionCount="0" docLength="1839" length="1" offset="1830" starttimestamp="1601998536229" timestamp="362033">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <DocumentChange __id="63" _type="Insert" date="Tue Oct 06 08:41:38 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1840" docExpressionCount="0" docLength="1840" length="1" offset="1831" starttimestamp="1601998536229" timestamp="362661">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="65" _type="Insert" date="Tue Oct 06 08:41:39 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1842" docExpressionCount="0" docLength="1842" length="2" offset="1832" starttimestamp="1601998536229" timestamp="363229">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="67" _type="Delete" date="Tue Oct 06 08:41:40 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1841" docExpressionCount="0" docLength="1841" endLine="59" length="1" offset="1833" startLine="59" starttimestamp="1601998536229" timestamp="363819">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="70" _type="Insert" date="Tue Oct 06 08:41:40 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1842" docExpressionCount="0" docLength="1842" length="1" offset="1831" starttimestamp="1601998536229" timestamp="364768">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="72" _type="Delete" date="Tue Oct 06 08:41:43 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1841" docExpressionCount="0" docLength="1841" endLine="58" length="1" offset="1831" startLine="58" starttimestamp="1601998536229" timestamp="366865">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="74" _type="Insert" date="Tue Oct 06 08:41:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1842" docExpressionCount="0" docLength="1842" length="1" offset="1831" starttimestamp="1601998536229" timestamp="368042">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="76" _type="Insert" date="Tue Oct 06 08:41:45 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1843" docExpressionCount="0" docLength="1843" length="1" offset="1832" starttimestamp="1601998536229" timestamp="368795">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="62" _type="InsertStringCommand" date="Tue Oct 06 08:41:38 PDT 2020" starttimestamp="1601998536229" timestamp="362037" timestamp2="362037">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="64" _type="InsertStringCommand" date="Tue Oct 06 08:41:38 PDT 2020" starttimestamp="1601998536229" timestamp="362662" timestamp2="362662">
+    <data><![CDATA[	]]></data>
+  </Command>
+  <Command __id="66" _type="InsertStringCommand" date="Tue Oct 06 08:41:39 PDT 2020" starttimestamp="1601998536229" timestamp="363232" timestamp2="363232">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="68" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:41:40 PDT 2020" starttimestamp="1601998536229" timestamp="363821" />
+  <Command __id="69" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.LINE_UP" date="Tue Oct 06 08:41:40 PDT 2020" starttimestamp="1601998536229" timestamp="364471" />
+  <Command __id="71" _type="InsertStringCommand" date="Tue Oct 06 08:41:40 PDT 2020" starttimestamp="1601998536229" timestamp="364769" timestamp2="364769">
+    <data><![CDATA[	]]></data>
+  </Command>
+  <Command __id="73" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:41:43 PDT 2020" starttimestamp="1601998536229" timestamp="366885" />
+  <Command __id="75" _type="InsertStringCommand" date="Tue Oct 06 08:41:44 PDT 2020" starttimestamp="1601998536229" timestamp="368045" timestamp2="368045">
+    <data><![CDATA[	]]></data>
+  </Command>
+  <Command __id="77" _type="InsertStringCommand" date="Tue Oct 06 08:41:45 PDT 2020" starttimestamp="1601998536229" timestamp="368798" timestamp2="368798">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <Command __id="79" _type="InsertStringCommand" date="Tue Oct 06 08:41:46 PDT 2020" starttimestamp="1601998536229" timestamp="370104" timestamp2="370104">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <Command __id="80" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.COLUMN_PREVIOUS" date="Tue Oct 06 08:41:46 PDT 2020" starttimestamp="1601998536229" timestamp="370703" />
+  <Command __id="82" _type="InsertStringCommand" date="Tue Oct 06 08:41:47 PDT 2020" starttimestamp="1601998536229" timestamp="370943" timestamp2="370943">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="83" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.LINE_UP" date="Tue Oct 06 08:41:48 PDT 2020" starttimestamp="1601998536229" timestamp="372045" />
+  <Command __id="84" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.COLUMN_NEXT" date="Tue Oct 06 08:41:48 PDT 2020" starttimestamp="1601998536229" timestamp="372348" />
+  <Command __id="86" _type="InsertStringCommand" date="Tue Oct 06 08:41:49 PDT 2020" starttimestamp="1601998536229" timestamp="372779" timestamp2="372779">
+    <data><![CDATA[]]></data>
+  </Command>
+  <Command __id="88" _type="InsertStringCommand" date="Tue Oct 06 08:41:49 PDT 2020" starttimestamp="1601998536229" timestamp="373422" timestamp2="373422">
+    <data><![CDATA[	]]></data>
+  </Command>
+  <Command __id="89" _type="ShellCommand" date="Tue Oct 06 08:41:52 PDT 2020" starttimestamp="1601998536229" timestamp="376334" type="ECLIPSE_LOST_FOCUS" />
+  <DocumentChange __id="78" _type="Insert" date="Tue Oct 06 08:41:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1844" docExpressionCount="0" docLength="1844" length="1" offset="1833" starttimestamp="1601998536229" timestamp="370101">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <DocumentChange __id="81" _type="Insert" date="Tue Oct 06 08:41:47 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1846" docExpressionCount="0" docLength="1846" length="2" offset="1833" starttimestamp="1601998536229" timestamp="370939">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="85" _type="Insert" date="Tue Oct 06 08:41:49 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1848" docExpressionCount="0" docLength="1848" length="2" offset="1833" starttimestamp="1601998536229" timestamp="372775">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <DocumentChange __id="87" _type="Insert" date="Tue Oct 06 08:41:49 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1849" docExpressionCount="0" docLength="1849" length="1" offset="1835" starttimestamp="1601998536229" timestamp="373421">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <Command __id="90" _type="ShellCommand" date="Tue Oct 06 08:42:04 PDT 2020" starttimestamp="1601998536229" timestamp="387853" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="91" _type="MoveCaretCommand" caretOffset="1840" date="Tue Oct 06 08:42:04 PDT 2020" docOffset="1840" starttimestamp="1601998536229" timestamp="387948" />
+  <Command __id="92" _type="MoveCaretCommand" caretOffset="1836" date="Tue Oct 06 08:42:04 PDT 2020" docOffset="1836" starttimestamp="1601998536229" timestamp="388458" />
+  <DocumentChange __id="93" _type="Insert" date="Tue Oct 06 08:42:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1850" docExpressionCount="0" docLength="1850" length="1" offset="1836" starttimestamp="1601998536229" timestamp="389777">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="94" _type="InsertStringCommand" date="Tue Oct 06 08:42:06 PDT 2020" starttimestamp="1601998536229" timestamp="389780" timestamp2="389780">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="95" _type="Insert" date="Tue Oct 06 08:42:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1851" docExpressionCount="0" docLength="1851" length="1" offset="1837" starttimestamp="1601998536229" timestamp="390117">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="96" _type="InsertStringCommand" date="Tue Oct 06 08:42:06 PDT 2020" starttimestamp="1601998536229" timestamp="390118" timestamp2="390118">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="97" _type="Insert" date="Tue Oct 06 08:42:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1852" docExpressionCount="0" docLength="1852" length="1" offset="1838" starttimestamp="1601998536229" timestamp="390298">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="98" _type="InsertStringCommand" date="Tue Oct 06 08:42:06 PDT 2020" starttimestamp="1601998536229" timestamp="390300" timestamp2="390300">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="99" _type="Insert" date="Tue Oct 06 08:42:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1853" docExpressionCount="0" docLength="1853" length="1" offset="1839" starttimestamp="1601998536229" timestamp="390435">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="100" _type="InsertStringCommand" date="Tue Oct 06 08:42:06 PDT 2020" starttimestamp="1601998536229" timestamp="390436" timestamp2="390436">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="101" _type="Insert" date="Tue Oct 06 08:42:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1854" docExpressionCount="0" docLength="1854" length="1" offset="1840" starttimestamp="1601998536229" timestamp="390636">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="102" _type="InsertStringCommand" date="Tue Oct 06 08:42:06 PDT 2020" starttimestamp="1601998536229" timestamp="390637" timestamp2="390637">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="103" _type="Insert" date="Tue Oct 06 08:42:07 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1855" docExpressionCount="0" docLength="1855" length="1" offset="1841" starttimestamp="1601998536229" timestamp="390828">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="104" _type="InsertStringCommand" date="Tue Oct 06 08:42:07 PDT 2020" starttimestamp="1601998536229" timestamp="390829" timestamp2="390829">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="105" _type="Insert" date="Tue Oct 06 08:42:07 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1856" docExpressionCount="0" docLength="1856" length="1" offset="1842" starttimestamp="1601998536229" timestamp="391109">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="106" _type="InsertStringCommand" date="Tue Oct 06 08:42:07 PDT 2020" starttimestamp="1601998536229" timestamp="391109" timestamp2="391109">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="107" _type="Insert" date="Tue Oct 06 08:42:07 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1857" docExpressionCount="0" docLength="1857" length="1" offset="1843" starttimestamp="1601998536229" timestamp="391239">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="108" _type="InsertStringCommand" date="Tue Oct 06 08:42:07 PDT 2020" starttimestamp="1601998536229" timestamp="391241" timestamp2="391241">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="109" _type="Insert" date="Tue Oct 06 08:42:07 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1858" docExpressionCount="0" docLength="1858" length="1" offset="1844" starttimestamp="1601998536229" timestamp="391405">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="110" _type="InsertStringCommand" date="Tue Oct 06 08:42:07 PDT 2020" starttimestamp="1601998536229" timestamp="391406" timestamp2="391406">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="111" _type="Insert" date="Tue Oct 06 08:42:07 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1859" docExpressionCount="0" docLength="1859" length="1" offset="1845" starttimestamp="1601998536229" timestamp="391690">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="112" _type="InsertStringCommand" date="Tue Oct 06 08:42:07 PDT 2020" starttimestamp="1601998536229" timestamp="391692" timestamp2="391692">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="113" _type="Insert" date="Tue Oct 06 08:42:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1860" docExpressionCount="0" docLength="1860" length="1" offset="1846" starttimestamp="1601998536229" timestamp="392497">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="114" _type="InsertStringCommand" date="Tue Oct 06 08:42:08 PDT 2020" starttimestamp="1601998536229" timestamp="392499" timestamp2="392499">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="115" _type="Insert" date="Tue Oct 06 08:42:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1863" docExpressionCount="0" docLength="1863" length="3" offset="1847" starttimestamp="1601998536229" timestamp="392686">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="116" _type="InsertStringCommand" date="Tue Oct 06 08:42:08 PDT 2020" starttimestamp="1601998536229" timestamp="392689" timestamp2="392689">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="117" _type="Insert" date="Tue Oct 06 08:42:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1864" docExpressionCount="0" docLength="1864" length="1" offset="1850" starttimestamp="1601998536229" timestamp="393650">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="118" _type="InsertStringCommand" date="Tue Oct 06 08:42:09 PDT 2020" starttimestamp="1601998536229" timestamp="393652" timestamp2="393652">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="119" _type="Insert" date="Tue Oct 06 08:42:11 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1865" docExpressionCount="0" docLength="1865" length="1" offset="1851" starttimestamp="1601998536229" timestamp="395475">
+    <text><![CDATA[6]]></text>
+  </DocumentChange>
+  <Command __id="120" _type="InsertStringCommand" date="Tue Oct 06 08:42:11 PDT 2020" starttimestamp="1601998536229" timestamp="395476" timestamp2="395476">
+    <data><![CDATA[6]]></data>
+  </Command>
+  <DocumentChange __id="121" _type="Insert" date="Tue Oct 06 08:42:11 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1866" docExpressionCount="0" docLength="1866" length="1" offset="1852" starttimestamp="1601998536229" timestamp="395594">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="122" _type="InsertStringCommand" date="Tue Oct 06 08:42:11 PDT 2020" starttimestamp="1601998536229" timestamp="395595" timestamp2="395595">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="123" _type="Insert" date="Tue Oct 06 08:42:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1867" docExpressionCount="0" docLength="1867" length="1" offset="1853" starttimestamp="1601998536229" timestamp="396161">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="124" _type="InsertStringCommand" date="Tue Oct 06 08:42:12 PDT 2020" starttimestamp="1601998536229" timestamp="396164" timestamp2="396164">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="125" _type="Insert" date="Tue Oct 06 08:42:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1868" docExpressionCount="0" docLength="1868" length="1" offset="1854" starttimestamp="1601998536229" timestamp="396327">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="126" _type="InsertStringCommand" date="Tue Oct 06 08:42:12 PDT 2020" starttimestamp="1601998536229" timestamp="396328" timestamp2="396328">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="127" _type="Insert" date="Tue Oct 06 08:42:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1869" docExpressionCount="0" docLength="1869" length="1" offset="1855" starttimestamp="1601998536229" timestamp="396632">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="128" _type="InsertStringCommand" date="Tue Oct 06 08:42:12 PDT 2020" starttimestamp="1601998536229" timestamp="396633" timestamp2="396633">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="129" _type="Insert" date="Tue Oct 06 08:42:14 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1870" docExpressionCount="0" docLength="1870" length="1" offset="1856" starttimestamp="1601998536229" timestamp="398053">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="130" _type="InsertStringCommand" date="Tue Oct 06 08:42:14 PDT 2020" starttimestamp="1601998536229" timestamp="398054" timestamp2="398054">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="131" _type="Insert" date="Tue Oct 06 08:42:14 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1871" docExpressionCount="0" docLength="1871" length="1" offset="1857" starttimestamp="1601998536229" timestamp="398202">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="132" _type="InsertStringCommand" date="Tue Oct 06 08:42:14 PDT 2020" starttimestamp="1601998536229" timestamp="398203" timestamp2="398203">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="133" _type="Insert" date="Tue Oct 06 08:42:15 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1872" docExpressionCount="0" docLength="1872" length="1" offset="1858" starttimestamp="1601998536229" timestamp="398847">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="134" _type="InsertStringCommand" date="Tue Oct 06 08:42:15 PDT 2020" starttimestamp="1601998536229" timestamp="398850" timestamp2="398850">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="135" _type="Insert" date="Tue Oct 06 08:42:15 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1873" docExpressionCount="0" docLength="1873" length="1" offset="1859" starttimestamp="1601998536229" timestamp="399161">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="136" _type="InsertStringCommand" date="Tue Oct 06 08:42:15 PDT 2020" starttimestamp="1601998536229" timestamp="399163" timestamp2="399163">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="137" _type="Insert" date="Tue Oct 06 08:42:16 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1876" docExpressionCount="0" docLength="1876" length="3" offset="1860" starttimestamp="1601998536229" timestamp="399782">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="138" _type="InsertStringCommand" date="Tue Oct 06 08:42:16 PDT 2020" starttimestamp="1601998536229" timestamp="399787" timestamp2="399787">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="139" _type="Insert" date="Tue Oct 06 08:42:16 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1877" docExpressionCount="0" docLength="1877" length="1" offset="1863" starttimestamp="1601998536229" timestamp="400567">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="140" _type="InsertStringCommand" date="Tue Oct 06 08:42:16 PDT 2020" starttimestamp="1601998536229" timestamp="400569" timestamp2="400569">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="141" _type="Insert" date="Tue Oct 06 08:42:22 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1878" docExpressionCount="0" docLength="1878" length="1" offset="1864" starttimestamp="1601998536229" timestamp="406465">
+    <text><![CDATA[2]]></text>
+  </DocumentChange>
+  <Command __id="142" _type="InsertStringCommand" date="Tue Oct 06 08:42:22 PDT 2020" starttimestamp="1601998536229" timestamp="406469" timestamp2="406469">
+    <data><![CDATA[2]]></data>
+  </Command>
+  <DocumentChange __id="143" _type="Insert" date="Tue Oct 06 08:42:22 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1879" docExpressionCount="0" docLength="1879" length="1" offset="1865" starttimestamp="1601998536229" timestamp="406544">
+    <text><![CDATA[7]]></text>
+  </DocumentChange>
+  <Command __id="144" _type="InsertStringCommand" date="Tue Oct 06 08:42:22 PDT 2020" starttimestamp="1601998536229" timestamp="406545" timestamp2="406545">
+    <data><![CDATA[7]]></data>
+  </Command>
+  <DocumentChange __id="145" _type="Insert" date="Tue Oct 06 08:42:23 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1880" docExpressionCount="0" docLength="1880" length="1" offset="1866" starttimestamp="1601998536229" timestamp="406771">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="146" _type="InsertStringCommand" date="Tue Oct 06 08:42:23 PDT 2020" starttimestamp="1601998536229" timestamp="406771" timestamp2="406771">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="147" _type="Insert" date="Tue Oct 06 08:42:23 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1881" docExpressionCount="0" docLength="1881" length="1" offset="1867" starttimestamp="1601998536229" timestamp="407003">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="148" _type="InsertStringCommand" date="Tue Oct 06 08:42:23 PDT 2020" starttimestamp="1601998536229" timestamp="407004" timestamp2="407004">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="149" _type="Insert" date="Tue Oct 06 08:42:23 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1882" docExpressionCount="0" docLength="1882" length="1" offset="1868" starttimestamp="1601998536229" timestamp="407246">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="150" _type="InsertStringCommand" date="Tue Oct 06 08:42:23 PDT 2020" starttimestamp="1601998536229" timestamp="407246" timestamp2="407246">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="151" _type="Insert" date="Tue Oct 06 08:42:23 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1883" docExpressionCount="0" docLength="1883" length="1" offset="1869" starttimestamp="1601998536229" timestamp="407574">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="152" _type="InsertStringCommand" date="Tue Oct 06 08:42:23 PDT 2020" starttimestamp="1601998536229" timestamp="407574" timestamp2="407574">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="153" _type="Insert" date="Tue Oct 06 08:42:24 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1884" docExpressionCount="0" docLength="1884" length="1" offset="1870" starttimestamp="1601998536229" timestamp="407894">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="154" _type="InsertStringCommand" date="Tue Oct 06 08:42:24 PDT 2020" starttimestamp="1601998536229" timestamp="407895" timestamp2="407895">
+    <data><![CDATA[5]]></data>
+  </Command>
+  <DocumentChange __id="155" _type="Insert" date="Tue Oct 06 08:42:24 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1885" docExpressionCount="0" docLength="1885" length="1" offset="1871" starttimestamp="1601998536229" timestamp="407996">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="156" _type="InsertStringCommand" date="Tue Oct 06 08:42:24 PDT 2020" starttimestamp="1601998536229" timestamp="407996" timestamp2="407996">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="157" _type="Insert" date="Tue Oct 06 08:42:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1886" docExpressionCount="0" docLength="1886" length="1" offset="1872" starttimestamp="1601998536229" timestamp="408812">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="158" _type="InsertStringCommand" date="Tue Oct 06 08:42:25 PDT 2020" starttimestamp="1601998536229" timestamp="408814" timestamp2="408814">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="159" _type="Insert" date="Tue Oct 06 08:42:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1887" docExpressionCount="0" docLength="1887" length="1" offset="1873" starttimestamp="1601998536229" timestamp="409125">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="160" _type="InsertStringCommand" date="Tue Oct 06 08:42:25 PDT 2020" starttimestamp="1601998536229" timestamp="409127" timestamp2="409127">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="161" _type="Insert" date="Tue Oct 06 08:42:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1890" docExpressionCount="0" docLength="1890" length="3" offset="1874" starttimestamp="1601998536229" timestamp="409947">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="162" _type="InsertStringCommand" date="Tue Oct 06 08:42:26 PDT 2020" starttimestamp="1601998536229" timestamp="409950" timestamp2="409950">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="163" _type="Insert" date="Tue Oct 06 08:42:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1891" docExpressionCount="0" docLength="1891" length="1" offset="1877" starttimestamp="1601998536229" timestamp="410832">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="164" _type="InsertStringCommand" date="Tue Oct 06 08:42:27 PDT 2020" starttimestamp="1601998536229" timestamp="410833" timestamp2="410833">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="165" _type="Insert" date="Tue Oct 06 08:42:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1892" docExpressionCount="0" docLength="1892" length="1" offset="1878" starttimestamp="1601998536229" timestamp="413602">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="166" _type="InsertStringCommand" date="Tue Oct 06 08:42:29 PDT 2020" starttimestamp="1601998536229" timestamp="413603" timestamp2="413603">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="167" _type="Insert" date="Tue Oct 06 08:42:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1893" docExpressionCount="0" docLength="1893" length="1" offset="1879" starttimestamp="1601998536229" timestamp="413883">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="168" _type="InsertStringCommand" date="Tue Oct 06 08:42:30 PDT 2020" starttimestamp="1601998536229" timestamp="413884" timestamp2="413884">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="169" _type="Insert" date="Tue Oct 06 08:42:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1894" docExpressionCount="0" docLength="1894" length="1" offset="1880" starttimestamp="1601998536229" timestamp="415959">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="170" _type="InsertStringCommand" date="Tue Oct 06 08:42:32 PDT 2020" starttimestamp="1601998536229" timestamp="415960" timestamp2="415960">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="171" _type="Insert" date="Tue Oct 06 08:42:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1895" docExpressionCount="0" docLength="1895" length="1" offset="1881" starttimestamp="1601998536229" timestamp="416750">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="172" _type="InsertStringCommand" date="Tue Oct 06 08:42:32 PDT 2020" starttimestamp="1601998536229" timestamp="416751" timestamp2="416751">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="173" _type="Insert" date="Tue Oct 06 08:42:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1896" docExpressionCount="0" docLength="1896" length="1" offset="1882" starttimestamp="1601998536229" timestamp="418531">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="174" _type="InsertStringCommand" date="Tue Oct 06 08:42:34 PDT 2020" starttimestamp="1601998536229" timestamp="418531" timestamp2="418531">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="175" _type="Insert" date="Tue Oct 06 08:42:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1897" docExpressionCount="0" docLength="1897" length="1" offset="1883" starttimestamp="1601998536229" timestamp="418777">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="176" _type="InsertStringCommand" date="Tue Oct 06 08:42:35 PDT 2020" starttimestamp="1601998536229" timestamp="418779" timestamp2="418779">
+    <data><![CDATA[5]]></data>
+  </Command>
+  <DocumentChange __id="177" _type="Delete" date="Tue Oct 06 08:42:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1896" docExpressionCount="0" docLength="1896" endLine="62" length="1" offset="1883" startLine="62" starttimestamp="1601998536229" timestamp="419351">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="178" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:42:35 PDT 2020" starttimestamp="1601998536229" timestamp="419354" />
+  <DocumentChange __id="179" _type="Delete" date="Tue Oct 06 08:42:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1895" docExpressionCount="0" docLength="1895" endLine="62" length="1" offset="1882" startLine="62" starttimestamp="1601998536229" timestamp="419481">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="180" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:42:35 PDT 2020" starttimestamp="1601998536229" timestamp="419483" />
+  <DocumentChange __id="181" _type="Delete" date="Tue Oct 06 08:42:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1894" docExpressionCount="0" docLength="1894" endLine="62" length="1" offset="1881" startLine="62" starttimestamp="1601998536229" timestamp="419616">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="182" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:42:35 PDT 2020" starttimestamp="1601998536229" timestamp="419618" />
+  <DocumentChange __id="183" _type="Insert" date="Tue Oct 06 08:42:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1895" docExpressionCount="0" docLength="1895" length="1" offset="1881" starttimestamp="1601998536229" timestamp="419971">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="184" _type="InsertStringCommand" date="Tue Oct 06 08:42:36 PDT 2020" starttimestamp="1601998536229" timestamp="419972" timestamp2="419972">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="185" _type="Insert" date="Tue Oct 06 08:42:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1896" docExpressionCount="0" docLength="1896" length="1" offset="1882" starttimestamp="1601998536229" timestamp="420070">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="186" _type="InsertStringCommand" date="Tue Oct 06 08:42:36 PDT 2020" starttimestamp="1601998536229" timestamp="420071" timestamp2="420071">
+    <data><![CDATA[5]]></data>
+  </Command>
+  <DocumentChange __id="187" _type="Insert" date="Tue Oct 06 08:42:39 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1897" docExpressionCount="0" docLength="1897" length="1" offset="1883" starttimestamp="1601998536229" timestamp="423047">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="188" _type="InsertStringCommand" date="Tue Oct 06 08:42:39 PDT 2020" starttimestamp="1601998536229" timestamp="423048" timestamp2="423048">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="189" _type="Insert" date="Tue Oct 06 08:42:40 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1898" docExpressionCount="0" docLength="1898" length="1" offset="1884" starttimestamp="1601998536229" timestamp="424613">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="190" _type="InsertStringCommand" date="Tue Oct 06 08:42:40 PDT 2020" starttimestamp="1601998536229" timestamp="424614" timestamp2="424614">
+    <data><![CDATA[5]]></data>
+  </Command>
+  <DocumentChange __id="191" _type="Insert" date="Tue Oct 06 08:42:40 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1899" docExpressionCount="0" docLength="1899" length="1" offset="1885" starttimestamp="1601998536229" timestamp="424698">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="192" _type="InsertStringCommand" date="Tue Oct 06 08:42:40 PDT 2020" starttimestamp="1601998536229" timestamp="424699" timestamp2="424699">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="193" _type="Insert" date="Tue Oct 06 08:42:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1900" docExpressionCount="0" docLength="1900" length="1" offset="1886" starttimestamp="1601998536229" timestamp="425741">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="194" _type="InsertStringCommand" date="Tue Oct 06 08:42:41 PDT 2020" starttimestamp="1601998536229" timestamp="425742" timestamp2="425742">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="195" _type="Insert" date="Tue Oct 06 08:42:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1901" docExpressionCount="0" docLength="1901" length="1" offset="1887" starttimestamp="1601998536229" timestamp="426341">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="196" _type="InsertStringCommand" date="Tue Oct 06 08:42:42 PDT 2020" starttimestamp="1601998536229" timestamp="426342" timestamp2="426342">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="197" _type="Insert" date="Tue Oct 06 08:42:43 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1904" docExpressionCount="0" docLength="1904" length="3" offset="1888" starttimestamp="1601998536229" timestamp="426880">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="198" _type="InsertStringCommand" date="Tue Oct 06 08:42:43 PDT 2020" starttimestamp="1601998536229" timestamp="426883" timestamp2="426883">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="199" _type="Insert" date="Tue Oct 06 08:42:43 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1905" docExpressionCount="0" docLength="1905" length="1" offset="1891" starttimestamp="1601998536229" timestamp="427738">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="200" _type="InsertStringCommand" date="Tue Oct 06 08:42:43 PDT 2020" starttimestamp="1601998536229" timestamp="427739" timestamp2="427739">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="201" _type="Insert" date="Tue Oct 06 08:42:50 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1906" docExpressionCount="0" docLength="1906" length="1" offset="1892" starttimestamp="1601998536229" timestamp="433893">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="202" _type="InsertStringCommand" date="Tue Oct 06 08:42:50 PDT 2020" starttimestamp="1601998536229" timestamp="433895" timestamp2="433895">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="203" _type="Insert" date="Tue Oct 06 08:42:50 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1907" docExpressionCount="0" docLength="1907" length="1" offset="1893" starttimestamp="1601998536229" timestamp="434327">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="204" _type="InsertStringCommand" date="Tue Oct 06 08:42:50 PDT 2020" starttimestamp="1601998536229" timestamp="434328" timestamp2="434328">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="205" _type="Insert" date="Tue Oct 06 08:42:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1908" docExpressionCount="0" docLength="1908" length="1" offset="1894" starttimestamp="1601998536229" timestamp="435826">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="206" _type="InsertStringCommand" date="Tue Oct 06 08:42:52 PDT 2020" starttimestamp="1601998536229" timestamp="435827" timestamp2="435827">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="207" _type="Insert" date="Tue Oct 06 08:42:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1909" docExpressionCount="0" docLength="1909" length="1" offset="1895" starttimestamp="1601998536229" timestamp="437361">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="208" _type="InsertStringCommand" date="Tue Oct 06 08:42:53 PDT 2020" starttimestamp="1601998536229" timestamp="437361" timestamp2="437361">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="209" _type="Insert" date="Tue Oct 06 08:42:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1910" docExpressionCount="0" docLength="1910" length="1" offset="1896" starttimestamp="1601998536229" timestamp="437495">
+    <text><![CDATA[2]]></text>
+  </DocumentChange>
+  <Command __id="210" _type="InsertStringCommand" date="Tue Oct 06 08:42:53 PDT 2020" starttimestamp="1601998536229" timestamp="437496" timestamp2="437496">
+    <data><![CDATA[2]]></data>
+  </Command>
+  <DocumentChange __id="211" _type="Insert" date="Tue Oct 06 08:42:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1911" docExpressionCount="0" docLength="1911" length="1" offset="1897" starttimestamp="1601998536229" timestamp="437610">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="212" _type="InsertStringCommand" date="Tue Oct 06 08:42:53 PDT 2020" starttimestamp="1601998536229" timestamp="437611" timestamp2="437611">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="213" _type="Insert" date="Tue Oct 06 08:42:54 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1912" docExpressionCount="0" docLength="1912" length="1" offset="1898" starttimestamp="1601998536229" timestamp="438622">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="214" _type="InsertStringCommand" date="Tue Oct 06 08:42:54 PDT 2020" starttimestamp="1601998536229" timestamp="438623" timestamp2="438623">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="215" _type="Insert" date="Tue Oct 06 08:42:57 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1913" docExpressionCount="0" docLength="1913" length="1" offset="1899" starttimestamp="1601998536229" timestamp="440949">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="216" _type="InsertStringCommand" date="Tue Oct 06 08:42:57 PDT 2020" starttimestamp="1601998536229" timestamp="440950" timestamp2="440950">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="217" _type="Insert" date="Tue Oct 06 08:42:57 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1914" docExpressionCount="0" docLength="1914" length="1" offset="1900" starttimestamp="1601998536229" timestamp="441086">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="218" _type="InsertStringCommand" date="Tue Oct 06 08:42:57 PDT 2020" starttimestamp="1601998536229" timestamp="441086" timestamp2="441086">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="219" _type="Insert" date="Tue Oct 06 08:42:57 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1915" docExpressionCount="0" docLength="1915" length="1" offset="1901" starttimestamp="1601998536229" timestamp="441501">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="220" _type="InsertStringCommand" date="Tue Oct 06 08:42:57 PDT 2020" starttimestamp="1601998536229" timestamp="441503" timestamp2="441503">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="221" _type="Insert" date="Tue Oct 06 08:42:58 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1916" docExpressionCount="0" docLength="1916" length="1" offset="1902" starttimestamp="1601998536229" timestamp="441877">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="222" _type="InsertStringCommand" date="Tue Oct 06 08:42:58 PDT 2020" starttimestamp="1601998536229" timestamp="441878" timestamp2="441878">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="223" _type="Insert" date="Tue Oct 06 08:42:58 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1919" docExpressionCount="0" docLength="1919" length="3" offset="1903" starttimestamp="1601998536229" timestamp="442144">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="224" _type="InsertStringCommand" date="Tue Oct 06 08:42:58 PDT 2020" starttimestamp="1601998536229" timestamp="442146" timestamp2="442146">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="225" _type="Insert" date="Tue Oct 06 08:42:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1920" docExpressionCount="0" docLength="1920" length="1" offset="1906" starttimestamp="1601998536229" timestamp="443111">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="226" _type="InsertStringCommand" date="Tue Oct 06 08:42:59 PDT 2020" starttimestamp="1601998536229" timestamp="443112" timestamp2="443112">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="227" _type="Insert" date="Tue Oct 06 08:43:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1921" docExpressionCount="0" docLength="1921" length="1" offset="1907" starttimestamp="1601998536229" timestamp="465317">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="228" _type="InsertStringCommand" date="Tue Oct 06 08:43:21 PDT 2020" starttimestamp="1601998536229" timestamp="465319" timestamp2="465319">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="229" _type="Delete" date="Tue Oct 06 08:43:22 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1920" docExpressionCount="0" docLength="1920" endLine="64" length="1" offset="1907" startLine="64" starttimestamp="1601998536229" timestamp="466715">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="230" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:43:22 PDT 2020" starttimestamp="1601998536229" timestamp="466718" />
+  <DocumentChange __id="231" _type="Insert" date="Tue Oct 06 08:43:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1921" docExpressionCount="0" docLength="1921" length="1" offset="1907" starttimestamp="1601998536229" timestamp="469114">
+    <text><![CDATA[2]]></text>
+  </DocumentChange>
+  <Command __id="232" _type="InsertStringCommand" date="Tue Oct 06 08:43:25 PDT 2020" starttimestamp="1601998536229" timestamp="469116" timestamp2="469116">
+    <data><![CDATA[2]]></data>
+  </Command>
+  <DocumentChange __id="233" _type="Insert" date="Tue Oct 06 08:43:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1922" docExpressionCount="0" docLength="1922" length="1" offset="1908" starttimestamp="1601998536229" timestamp="469292">
+    <text><![CDATA[7]]></text>
+  </DocumentChange>
+  <Command __id="234" _type="InsertStringCommand" date="Tue Oct 06 08:43:25 PDT 2020" starttimestamp="1601998536229" timestamp="469292" timestamp2="469292">
+    <data><![CDATA[7]]></data>
+  </Command>
+  <DocumentChange __id="235" _type="Insert" date="Tue Oct 06 08:43:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1923" docExpressionCount="0" docLength="1923" length="1" offset="1909" starttimestamp="1601998536229" timestamp="470426">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="236" _type="InsertStringCommand" date="Tue Oct 06 08:43:26 PDT 2020" starttimestamp="1601998536229" timestamp="470427" timestamp2="470427">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="237" _type="Insert" date="Tue Oct 06 08:43:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1924" docExpressionCount="0" docLength="1924" length="1" offset="1910" starttimestamp="1601998536229" timestamp="470606">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="238" _type="InsertStringCommand" date="Tue Oct 06 08:43:26 PDT 2020" starttimestamp="1601998536229" timestamp="470607" timestamp2="470607">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="239" _type="Insert" date="Tue Oct 06 08:43:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1925" docExpressionCount="0" docLength="1925" length="1" offset="1911" starttimestamp="1601998536229" timestamp="470726">
+    <text><![CDATA[2]]></text>
+  </DocumentChange>
+  <Command __id="240" _type="InsertStringCommand" date="Tue Oct 06 08:43:26 PDT 2020" starttimestamp="1601998536229" timestamp="470727" timestamp2="470727">
+    <data><![CDATA[2]]></data>
+  </Command>
+  <DocumentChange __id="241" _type="Insert" date="Tue Oct 06 08:43:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1926" docExpressionCount="0" docLength="1926" length="1" offset="1912" starttimestamp="1601998536229" timestamp="471158">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="242" _type="InsertStringCommand" date="Tue Oct 06 08:43:27 PDT 2020" starttimestamp="1601998536229" timestamp="471158" timestamp2="471158">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="243" _type="Insert" date="Tue Oct 06 08:43:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1927" docExpressionCount="0" docLength="1927" length="1" offset="1913" starttimestamp="1601998536229" timestamp="471486">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="244" _type="InsertStringCommand" date="Tue Oct 06 08:43:27 PDT 2020" starttimestamp="1601998536229" timestamp="471487" timestamp2="471487">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="245" _type="Insert" date="Tue Oct 06 08:43:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1928" docExpressionCount="0" docLength="1928" length="1" offset="1914" starttimestamp="1601998536229" timestamp="472296">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="246" _type="InsertStringCommand" date="Tue Oct 06 08:43:28 PDT 2020" starttimestamp="1601998536229" timestamp="472297" timestamp2="472297">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="247" _type="Insert" date="Tue Oct 06 08:43:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1929" docExpressionCount="0" docLength="1929" length="1" offset="1915" starttimestamp="1601998536229" timestamp="472471">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="248" _type="InsertStringCommand" date="Tue Oct 06 08:43:28 PDT 2020" starttimestamp="1601998536229" timestamp="472472" timestamp2="472472">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <DocumentChange __id="249" _type="Insert" date="Tue Oct 06 08:43:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1930" docExpressionCount="0" docLength="1930" length="1" offset="1916" starttimestamp="1601998536229" timestamp="472964">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="250" _type="InsertStringCommand" date="Tue Oct 06 08:43:29 PDT 2020" starttimestamp="1601998536229" timestamp="472966" timestamp2="472966">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="251" _type="Insert" date="Tue Oct 06 08:43:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1931" docExpressionCount="0" docLength="1931" length="1" offset="1917" starttimestamp="1601998536229" timestamp="473328">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="252" _type="InsertStringCommand" date="Tue Oct 06 08:43:29 PDT 2020" starttimestamp="1601998536229" timestamp="473330" timestamp2="473330">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="253" _type="Insert" date="Tue Oct 06 08:43:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1934" docExpressionCount="0" docLength="1934" length="3" offset="1918" starttimestamp="1601998536229" timestamp="474180">
+    <text><![CDATA[
+		]]></text>
+  </DocumentChange>
+  <Command __id="254" _type="InsertStringCommand" date="Tue Oct 06 08:43:30 PDT 2020" starttimestamp="1601998536229" timestamp="474183" timestamp2="474183">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="255" _type="Insert" date="Tue Oct 06 08:43:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1935" docExpressionCount="0" docLength="1935" length="1" offset="1921" starttimestamp="1601998536229" timestamp="475585">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="256" _type="InsertStringCommand" date="Tue Oct 06 08:43:31 PDT 2020" starttimestamp="1601998536229" timestamp="475587" timestamp2="475587">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="257" _type="Insert" date="Tue Oct 06 08:43:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1936" docExpressionCount="0" docLength="1936" length="1" offset="1922" starttimestamp="1601998536229" timestamp="476125">
+    <text><![CDATA[6]]></text>
+  </DocumentChange>
+  <Command __id="258" _type="InsertStringCommand" date="Tue Oct 06 08:43:32 PDT 2020" starttimestamp="1601998536229" timestamp="476126" timestamp2="476126">
+    <data><![CDATA[6]]></data>
+  </Command>
+  <DocumentChange __id="259" _type="Insert" date="Tue Oct 06 08:43:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1937" docExpressionCount="0" docLength="1937" length="1" offset="1923" starttimestamp="1601998536229" timestamp="476902">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="260" _type="InsertStringCommand" date="Tue Oct 06 08:43:33 PDT 2020" starttimestamp="1601998536229" timestamp="476903" timestamp2="476903">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="261" _type="Insert" date="Tue Oct 06 08:43:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1938" docExpressionCount="0" docLength="1938" length="1" offset="1924" starttimestamp="1601998536229" timestamp="477629">
+    <text><![CDATA[1]]></text>
+  </DocumentChange>
+  <Command __id="262" _type="InsertStringCommand" date="Tue Oct 06 08:43:33 PDT 2020" starttimestamp="1601998536229" timestamp="477630" timestamp2="477630">
+    <data><![CDATA[1]]></data>
+  </Command>
+  <DocumentChange __id="263" _type="Insert" date="Tue Oct 06 08:43:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1939" docExpressionCount="0" docLength="1939" length="1" offset="1925" starttimestamp="1601998536229" timestamp="477797">
+    <text><![CDATA[5]]></text>
+  </DocumentChange>
+  <Command __id="264" _type="InsertStringCommand" date="Tue Oct 06 08:43:34 PDT 2020" starttimestamp="1601998536229" timestamp="477798" timestamp2="477798">
+    <data><![CDATA[5]]></data>
+  </Command>
+  <DocumentChange __id="265" _type="Insert" date="Tue Oct 06 08:43:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1940" docExpressionCount="0" docLength="1940" length="1" offset="1926" starttimestamp="1601998536229" timestamp="478041">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="266" _type="InsertStringCommand" date="Tue Oct 06 08:43:34 PDT 2020" starttimestamp="1601998536229" timestamp="478042" timestamp2="478042">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="267" _type="Insert" date="Tue Oct 06 08:43:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1941" docExpressionCount="0" docLength="1941" length="1" offset="1927" starttimestamp="1601998536229" timestamp="479020">
+    <text><![CDATA[3]]></text>
+  </DocumentChange>
+  <Command __id="268" _type="InsertStringCommand" date="Tue Oct 06 08:43:35 PDT 2020" starttimestamp="1601998536229" timestamp="479021" timestamp2="479021">
+    <data><![CDATA[3]]></data>
+  </Command>
+  <DocumentChange __id="269" _type="Insert" date="Tue Oct 06 08:43:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1942" docExpressionCount="0" docLength="1942" length="1" offset="1928" starttimestamp="1601998536229" timestamp="479171">
+    <text><![CDATA[0]]></text>
+  </DocumentChange>
+  <Command __id="270" _type="InsertStringCommand" date="Tue Oct 06 08:43:35 PDT 2020" starttimestamp="1601998536229" timestamp="479172" timestamp2="479172">
+    <data><![CDATA[0]]></data>
+  </Command>
+  <Command __id="272" _type="InsertStringCommand" date="Tue Oct 06 08:43:35 PDT 2020" starttimestamp="1601998536229" timestamp="479686" timestamp2="479686">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <Command __id="273" _type="ShellCommand" date="Tue Oct 06 08:43:37 PDT 2020" starttimestamp="1601998536229" timestamp="481381" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="274" _type="ShellCommand" date="Tue Oct 06 08:43:39 PDT 2020" starttimestamp="1601998536229" timestamp="483626" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="275" _type="MoveCaretCommand" caretOffset="1920" date="Tue Oct 06 08:43:39 PDT 2020" docOffset="1920" starttimestamp="1601998536229" timestamp="483726" />
+  <Command __id="276" _type="MoveCaretCommand" caretOffset="1936" date="Tue Oct 06 08:43:40 PDT 2020" docOffset="1936" starttimestamp="1601998536229" timestamp="484296" />
+  <Command __id="278" _type="InsertStringCommand" date="Tue Oct 06 08:43:41 PDT 2020" starttimestamp="1601998536229" timestamp="484926" timestamp2="484926">
+    <data><![CDATA[.]]></data>
+  </Command>
+  <Command __id="279" _type="ShellCommand" date="Tue Oct 06 08:43:54 PDT 2020" starttimestamp="1601998536229" timestamp="498697" type="ECLIPSE_LOST_FOCUS" />
+  <DocumentChange __id="271" _type="Insert" date="Tue Oct 06 08:43:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1943" docExpressionCount="0" docLength="1943" length="1" offset="1929" starttimestamp="1601998536229" timestamp="479685">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <DocumentChange __id="277" _type="Insert" date="Tue Oct 06 08:43:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1944" docExpressionCount="0" docLength="1944" length="1" offset="1936" starttimestamp="1601998536229" timestamp="484924">
+    <text><![CDATA[.]]></text>
+  </DocumentChange>
+  <Command __id="280" _type="ShellCommand" date="Tue Oct 06 08:44:36 PDT 2020" starttimestamp="1601998536229" timestamp="540467" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="281" _type="MoveCaretCommand" caretOffset="1937" date="Tue Oct 06 08:44:36 PDT 2020" docOffset="1937" starttimestamp="1601998536229" timestamp="540578" />
+  <DocumentChange __id="282" _type="Insert" date="Tue Oct 06 08:44:37 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1945" docExpressionCount="0" docLength="1945" length="1" offset="1937" starttimestamp="1601998536229" timestamp="541597">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <Command __id="283" _type="InsertStringCommand" date="Tue Oct 06 08:44:37 PDT 2020" starttimestamp="1601998536229" timestamp="541600" timestamp2="541600">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="284" _type="Insert" date="Tue Oct 06 08:44:38 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1946" docExpressionCount="0" docLength="1946" length="1" offset="1938" starttimestamp="1601998536229" timestamp="541780">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <Command __id="285" _type="InsertStringCommand" date="Tue Oct 06 08:44:38 PDT 2020" starttimestamp="1601998536229" timestamp="541790" timestamp2="541790">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="286" _type="Insert" date="Tue Oct 06 08:44:51 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1947" docExpressionCount="0" docLength="1947" length="1" offset="1939" starttimestamp="1601998536229" timestamp="554794">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="287" _type="InsertStringCommand" date="Tue Oct 06 08:44:51 PDT 2020" starttimestamp="1601998536229" timestamp="554795" timestamp2="554795">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="288" _type="Insert" date="Tue Oct 06 08:44:51 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1948" docExpressionCount="0" docLength="1948" length="1" offset="1940" starttimestamp="1601998536229" timestamp="554958">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="289" _type="InsertStringCommand" date="Tue Oct 06 08:44:51 PDT 2020" starttimestamp="1601998536229" timestamp="554958" timestamp2="554958">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="290" _type="Insert" date="Tue Oct 06 08:44:51 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1949" docExpressionCount="0" docLength="1949" length="1" offset="1941" starttimestamp="1601998536229" timestamp="555077">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="291" _type="InsertStringCommand" date="Tue Oct 06 08:44:51 PDT 2020" starttimestamp="1601998536229" timestamp="555078" timestamp2="555078">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="292" _type="Insert" date="Tue Oct 06 08:44:51 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1950" docExpressionCount="0" docLength="1950" length="1" offset="1942" starttimestamp="1601998536229" timestamp="555224">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="293" _type="InsertStringCommand" date="Tue Oct 06 08:44:51 PDT 2020" starttimestamp="1601998536229" timestamp="555225" timestamp2="555225">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="294" _type="Insert" date="Tue Oct 06 08:44:51 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1951" docExpressionCount="0" docLength="1951" length="1" offset="1943" starttimestamp="1601998536229" timestamp="555731">
+    <text><![CDATA[G]]></text>
+  </DocumentChange>
+  <Command __id="295" _type="InsertStringCommand" date="Tue Oct 06 08:44:51 PDT 2020" starttimestamp="1601998536229" timestamp="555732" timestamp2="555732">
+    <data><![CDATA[G]]></data>
+  </Command>
+  <DocumentChange __id="296" _type="Insert" date="Tue Oct 06 08:44:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1952" docExpressionCount="0" docLength="1952" length="1" offset="1944" starttimestamp="1601998536229" timestamp="555926">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="297" _type="InsertStringCommand" date="Tue Oct 06 08:44:52 PDT 2020" starttimestamp="1601998536229" timestamp="555927" timestamp2="555927">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="298" _type="Insert" date="Tue Oct 06 08:44:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1953" docExpressionCount="0" docLength="1953" length="1" offset="1945" starttimestamp="1601998536229" timestamp="556029">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="299" _type="InsertStringCommand" date="Tue Oct 06 08:44:52 PDT 2020" starttimestamp="1601998536229" timestamp="556030" timestamp2="556030">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <DocumentChange __id="300" _type="Insert" date="Tue Oct 06 08:44:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1954" docExpressionCount="0" docLength="1954" length="1" offset="1946" starttimestamp="1601998536229" timestamp="556193">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="301" _type="InsertStringCommand" date="Tue Oct 06 08:44:52 PDT 2020" starttimestamp="1601998536229" timestamp="556194" timestamp2="556194">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="302" _type="Insert" date="Tue Oct 06 08:44:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1955" docExpressionCount="0" docLength="1955" length="1" offset="1947" starttimestamp="1601998536229" timestamp="556266">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="303" _type="InsertStringCommand" date="Tue Oct 06 08:44:52 PDT 2020" starttimestamp="1601998536229" timestamp="556267" timestamp2="556267">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="304" _type="Insert" date="Tue Oct 06 08:44:52 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1956" docExpressionCount="0" docLength="1956" length="1" offset="1948" starttimestamp="1601998536229" timestamp="556643">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <Command __id="305" _type="InsertStringCommand" date="Tue Oct 06 08:44:52 PDT 2020" starttimestamp="1601998536229" timestamp="556644" timestamp2="556644">
+    <data><![CDATA[S]]></data>
+  </Command>
+  <DocumentChange __id="306" _type="Insert" date="Tue Oct 06 08:44:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1957" docExpressionCount="0" docLength="1957" length="1" offset="1949" starttimestamp="1601998536229" timestamp="556873">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="307" _type="InsertStringCommand" date="Tue Oct 06 08:44:53 PDT 2020" starttimestamp="1601998536229" timestamp="556873" timestamp2="556873">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="308" _type="Insert" date="Tue Oct 06 08:44:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1958" docExpressionCount="0" docLength="1958" length="1" offset="1950" starttimestamp="1601998536229" timestamp="556998">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <Command __id="309" _type="InsertStringCommand" date="Tue Oct 06 08:44:53 PDT 2020" starttimestamp="1601998536229" timestamp="556999" timestamp2="556999">
+    <data><![CDATA[f]]></data>
+  </Command>
+  <DocumentChange __id="310" _type="Insert" date="Tue Oct 06 08:44:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1959" docExpressionCount="0" docLength="1959" length="1" offset="1951" starttimestamp="1601998536229" timestamp="557114">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="311" _type="InsertStringCommand" date="Tue Oct 06 08:44:53 PDT 2020" starttimestamp="1601998536229" timestamp="557114" timestamp2="557114">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="312" _type="Insert" date="Tue Oct 06 08:44:53 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1960" docExpressionCount="0" docLength="1960" length="1" offset="1952" starttimestamp="1601998536229" timestamp="557694">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="313" _type="InsertStringCommand" date="Tue Oct 06 08:44:53 PDT 2020" starttimestamp="1601998536229" timestamp="557695" timestamp2="557695">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <DocumentChange __id="314" _type="Insert" date="Tue Oct 06 08:44:54 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1961" docExpressionCount="0" docLength="1961" length="1" offset="1953" starttimestamp="1601998536229" timestamp="558107">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="315" _type="InsertStringCommand" date="Tue Oct 06 08:44:54 PDT 2020" starttimestamp="1601998536229" timestamp="558108" timestamp2="558108">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="316" _type="Insert" date="Tue Oct 06 08:44:54 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1962" docExpressionCount="0" docLength="1962" length="1" offset="1954" starttimestamp="1601998536229" timestamp="558701">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="317" _type="InsertStringCommand" date="Tue Oct 06 08:44:54 PDT 2020" starttimestamp="1601998536229" timestamp="558702" timestamp2="558702">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="318" _type="Insert" date="Tue Oct 06 08:44:55 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1963" docExpressionCount="0" docLength="1963" length="1" offset="1955" starttimestamp="1601998536229" timestamp="559571">
+    <text><![CDATA[)]]></text>
+  </DocumentChange>
+  <Command __id="319" _type="InsertStringCommand" date="Tue Oct 06 08:44:55 PDT 2020" starttimestamp="1601998536229" timestamp="559573" timestamp2="559573">
+    <data><![CDATA[)]]></data>
+  </Command>
+  <DocumentChange __id="320" _type="Insert" date="Tue Oct 06 08:44:56 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1964" docExpressionCount="0" docLength="1964" length="1" offset="1956" starttimestamp="1601998536229" timestamp="559800">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="321" _type="InsertStringCommand" date="Tue Oct 06 08:44:56 PDT 2020" starttimestamp="1601998536229" timestamp="559801" timestamp2="559801">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="322" _type="Insert" date="Tue Oct 06 08:44:56 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1965" docExpressionCount="0" docLength="1965" length="1" offset="1957" starttimestamp="1601998536229" timestamp="560045">
+    <text><![CDATA[:]]></text>
+  </DocumentChange>
+  <Command __id="323" _type="InsertStringCommand" date="Tue Oct 06 08:44:56 PDT 2020" starttimestamp="1601998536229" timestamp="560046" timestamp2="560046">
+    <data><![CDATA[:]]></data>
+  </Command>
+  <DocumentChange __id="324" _type="Insert" date="Tue Oct 06 08:44:56 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1966" docExpressionCount="0" docLength="1966" length="1" offset="1958" starttimestamp="1601998536229" timestamp="560720">
+    <text><![CDATA[-]]></text>
+  </DocumentChange>
+  <Command __id="325" _type="InsertStringCommand" date="Tue Oct 06 08:44:56 PDT 2020" starttimestamp="1601998536229" timestamp="560721" timestamp2="560721">
+    <data><![CDATA[-]]></data>
+  </Command>
+  <Command __id="327" _type="InsertStringCommand" date="Tue Oct 06 08:44:57 PDT 2020" starttimestamp="1601998536229" timestamp="560939" timestamp2="560939">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="326" _type="Insert" date="Tue Oct 06 08:44:57 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1967" docExpressionCount="0" docLength="1967" length="1" offset="1959" starttimestamp="1601998536229" timestamp="560937">
+    <text><![CDATA[
+]]></text>
+  </DocumentChange>
+  <DocumentChange __id="329" _type="Insert" date="Tue Oct 06 08:44:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1968" docExpressionCount="0" docLength="1968" length="1" offset="1954" starttimestamp="1601998536229" timestamp="563342">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <DocumentChange __id="331" _type="Insert" date="Tue Oct 06 08:44:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1969" docExpressionCount="0" docLength="1969" length="1" offset="1955" starttimestamp="1601998536229" timestamp="563569">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <DocumentChange __id="333" _type="Insert" date="Tue Oct 06 08:44:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1970" docExpressionCount="0" docLength="1970" length="1" offset="1956" starttimestamp="1601998536229" timestamp="563673">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <DocumentChange __id="335" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1971" docExpressionCount="0" docLength="1971" length="1" offset="1957" starttimestamp="1601998536229" timestamp="563816">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <DocumentChange __id="337" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1972" docExpressionCount="0" docLength="1972" length="1" offset="1958" starttimestamp="1601998536229" timestamp="563908">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <DocumentChange __id="339" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1973" docExpressionCount="0" docLength="1973" length="1" offset="1959" starttimestamp="1601998536229" timestamp="563989">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <DocumentChange __id="341" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1974" docExpressionCount="0" docLength="1974" length="1" offset="1960" starttimestamp="1601998536229" timestamp="564120">
+    <text><![CDATA[c]]></text>
+  </DocumentChange>
+  <DocumentChange __id="343" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1975" docExpressionCount="0" docLength="1975" length="1" offset="1961" starttimestamp="1601998536229" timestamp="564305">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <DocumentChange __id="345" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1976" docExpressionCount="0" docLength="1976" length="1" offset="1962" starttimestamp="1601998536229" timestamp="564423">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <DocumentChange __id="347" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1977" docExpressionCount="0" docLength="1977" length="1" offset="1963" starttimestamp="1601998536229" timestamp="564565">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <DocumentChange __id="349" _type="Insert" date="Tue Oct 06 08:45:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1978" docExpressionCount="0" docLength="1978" length="1" offset="1964" starttimestamp="1601998536229" timestamp="564719">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <DocumentChange __id="351" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1979" docExpressionCount="0" docLength="1979" length="1" offset="1965" starttimestamp="1601998536229" timestamp="564870">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <DocumentChange __id="353" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1980" docExpressionCount="0" docLength="1980" length="1" offset="1966" starttimestamp="1601998536229" timestamp="565018">
+    <text><![CDATA[r]]></text>
+  </DocumentChange>
+  <DocumentChange __id="355" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1981" docExpressionCount="0" docLength="1981" length="1" offset="1967" starttimestamp="1601998536229" timestamp="565139">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <DocumentChange __id="357" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1982" docExpressionCount="0" docLength="1982" length="1" offset="1968" starttimestamp="1601998536229" timestamp="565265">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <DocumentChange __id="359" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1983" docExpressionCount="0" docLength="1983" length="1" offset="1969" starttimestamp="1601998536229" timestamp="565282">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <DocumentChange __id="361" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1984" docExpressionCount="0" docLength="1984" length="1" offset="1970" starttimestamp="1601998536229" timestamp="565384">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <DocumentChange __id="363" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1985" docExpressionCount="0" docLength="1985" length="1" offset="1971" starttimestamp="1601998536229" timestamp="565441">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <DocumentChange __id="365" _type="Insert" date="Tue Oct 06 08:45:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1986" docExpressionCount="0" docLength="1986" length="1" offset="1972" starttimestamp="1601998536229" timestamp="565651">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <DocumentChange __id="367" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1987" docExpressionCount="0" docLength="1987" length="1" offset="1973" starttimestamp="1601998536229" timestamp="565794">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <DocumentChange __id="369" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1988" docExpressionCount="0" docLength="1988" length="1" offset="1974" starttimestamp="1601998536229" timestamp="566031">
+    <text><![CDATA[E]]></text>
+  </DocumentChange>
+  <DocumentChange __id="371" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1989" docExpressionCount="0" docLength="1989" length="1" offset="1975" starttimestamp="1601998536229" timestamp="566240">
+    <text><![CDATA[x]]></text>
+  </DocumentChange>
+  <DocumentChange __id="373" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1990" docExpressionCount="0" docLength="1990" length="1" offset="1976" starttimestamp="1601998536229" timestamp="566331">
+    <text><![CDATA[h]]></text>
+  </DocumentChange>
+  <Command __id="328" _type="MoveCaretCommand" caretOffset="1954" date="Tue Oct 06 08:44:58 PDT 2020" docOffset="1954" starttimestamp="1601998536229" timestamp="562767" />
+  <Command __id="330" _type="InsertStringCommand" date="Tue Oct 06 08:44:59 PDT 2020" starttimestamp="1601998536229" timestamp="563344" timestamp2="563344">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <Command __id="332" _type="InsertStringCommand" date="Tue Oct 06 08:44:59 PDT 2020" starttimestamp="1601998536229" timestamp="563570" timestamp2="563570">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <Command __id="334" _type="InsertStringCommand" date="Tue Oct 06 08:44:59 PDT 2020" starttimestamp="1601998536229" timestamp="563674" timestamp2="563674">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <Command __id="336" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="563817" timestamp2="563817">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <Command __id="338" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="563909" timestamp2="563909">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <Command __id="340" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="563990" timestamp2="563990">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <Command __id="342" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="564121" timestamp2="564121">
+    <data><![CDATA[c]]></data>
+  </Command>
+  <Command __id="344" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="564306" timestamp2="564306">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <Command __id="346" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="564424" timestamp2="564424">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <Command __id="348" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="564566" timestamp2="564566">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <Command __id="350" _type="InsertStringCommand" date="Tue Oct 06 08:45:00 PDT 2020" starttimestamp="1601998536229" timestamp="564720" timestamp2="564720">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <Command __id="352" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="564871" timestamp2="564871">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <Command __id="354" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565019" timestamp2="565019">
+    <data><![CDATA[r]]></data>
+  </Command>
+  <Command __id="356" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565140" timestamp2="565140">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <Command __id="358" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565266" timestamp2="565266">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <Command __id="360" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565283" timestamp2="565283">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <Command __id="362" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565385" timestamp2="565385">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <Command __id="364" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565442" timestamp2="565442">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <Command __id="366" _type="InsertStringCommand" date="Tue Oct 06 08:45:01 PDT 2020" starttimestamp="1601998536229" timestamp="565651" timestamp2="565651">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <Command __id="368" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="565795" timestamp2="565795">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <Command __id="370" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566032" timestamp2="566032">
+    <data><![CDATA[E]]></data>
+  </Command>
+  <Command __id="372" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566241" timestamp2="566241">
+    <data><![CDATA[x]]></data>
+  </Command>
+  <Command __id="374" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566332" timestamp2="566332">
+    <data><![CDATA[h]]></data>
+  </Command>
+  <DocumentChange __id="375" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1991" docExpressionCount="0" docLength="1991" length="1" offset="1977" starttimestamp="1601998536229" timestamp="566481">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="376" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566483" timestamp2="566483">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="377" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1992" docExpressionCount="0" docLength="1992" length="1" offset="1978" starttimestamp="1601998536229" timestamp="566580">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="378" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566581" timestamp2="566581">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="379" _type="Insert" date="Tue Oct 06 08:45:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1993" docExpressionCount="0" docLength="1993" length="1" offset="1979" starttimestamp="1601998536229" timestamp="566682">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="380" _type="InsertStringCommand" date="Tue Oct 06 08:45:02 PDT 2020" starttimestamp="1601998536229" timestamp="566682" timestamp2="566682">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="381" _type="Insert" date="Tue Oct 06 08:45:03 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1994" docExpressionCount="0" docLength="1994" length="1" offset="1980" starttimestamp="1601998536229" timestamp="566814">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="382" _type="InsertStringCommand" date="Tue Oct 06 08:45:03 PDT 2020" starttimestamp="1601998536229" timestamp="566814" timestamp2="566814">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="383" _type="Insert" date="Tue Oct 06 08:45:03 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1995" docExpressionCount="0" docLength="1995" length="1" offset="1981" starttimestamp="1601998536229" timestamp="566912">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="384" _type="InsertStringCommand" date="Tue Oct 06 08:45:03 PDT 2020" starttimestamp="1601998536229" timestamp="566913" timestamp2="566913">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="385" _type="Insert" date="Tue Oct 06 08:45:03 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1996" docExpressionCount="0" docLength="1996" length="1" offset="1982" starttimestamp="1601998536229" timestamp="566981">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="386" _type="InsertStringCommand" date="Tue Oct 06 08:45:03 PDT 2020" starttimestamp="1601998536229" timestamp="566982" timestamp2="566982">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <Command __id="388" _type="InsertStringCommand" date="Tue Oct 06 08:45:03 PDT 2020" starttimestamp="1601998536229" timestamp="567061" timestamp2="567061">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <Command __id="389" _type="MoveCaretCommand" caretOffset="1990" date="Tue Oct 06 08:45:04 PDT 2020" docOffset="1990" starttimestamp="1601998536229" timestamp="568155" />
+  <Command __id="390" _type="ShellCommand" date="Tue Oct 06 08:45:05 PDT 2020" starttimestamp="1601998536229" timestamp="569569" type="ECLIPSE_LOST_FOCUS" />
+  <DocumentChange __id="387" _type="Insert" date="Tue Oct 06 08:45:03 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1997" docExpressionCount="0" docLength="1997" length="1" offset="1983" starttimestamp="1601998536229" timestamp="567060">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="391" _type="ShellCommand" date="Tue Oct 06 08:47:15 PDT 2020" starttimestamp="1601998536229" timestamp="699297" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="392" _type="MoveCaretCommand" caretOffset="1990" date="Tue Oct 06 08:47:15 PDT 2020" docOffset="1990" starttimestamp="1601998536229" timestamp="699430" />
+  <DocumentChange __id="393" _type="Insert" date="Tue Oct 06 08:47:18 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1998" docExpressionCount="0" docLength="1998" length="1" offset="1990" starttimestamp="1601998536229" timestamp="702251">
+    <text><![CDATA[	]]></text>
+  </DocumentChange>
+  <Command __id="394" _type="InsertStringCommand" date="Tue Oct 06 08:47:18 PDT 2020" starttimestamp="1601998536229" timestamp="702252" timestamp2="702252">
+    <data><![CDATA[	]]></data>
+  </Command>
+  <DocumentChange __id="395" _type="Insert" date="Tue Oct 06 08:47:18 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1999" docExpressionCount="0" docLength="1999" length="1" offset="1991" starttimestamp="1601998536229" timestamp="702506">
+    <text><![CDATA[g]]></text>
+  </DocumentChange>
+  <Command __id="396" _type="InsertStringCommand" date="Tue Oct 06 08:47:18 PDT 2020" starttimestamp="1601998536229" timestamp="702506" timestamp2="702506">
+    <data><![CDATA[g]]></data>
+  </Command>
+  <DocumentChange __id="397" _type="Insert" date="Tue Oct 06 08:47:18 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2000" docExpressionCount="0" docLength="2000" length="1" offset="1992" starttimestamp="1601998536229" timestamp="702616">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="398" _type="InsertStringCommand" date="Tue Oct 06 08:47:18 PDT 2020" starttimestamp="1601998536229" timestamp="702616" timestamp2="702616">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="399" _type="Insert" date="Tue Oct 06 08:47:18 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2001" docExpressionCount="0" docLength="2001" length="1" offset="1993" starttimestamp="1601998536229" timestamp="702741">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="400" _type="InsertStringCommand" date="Tue Oct 06 08:47:18 PDT 2020" starttimestamp="1601998536229" timestamp="702742" timestamp2="702742">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <DocumentChange __id="401" _type="Insert" date="Tue Oct 06 08:47:19 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2002" docExpressionCount="0" docLength="2002" length="1" offset="1994" starttimestamp="1601998536229" timestamp="702904">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="402" _type="InsertStringCommand" date="Tue Oct 06 08:47:19 PDT 2020" starttimestamp="1601998536229" timestamp="702905" timestamp2="702905">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="403" _type="Insert" date="Tue Oct 06 08:47:19 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2003" docExpressionCount="0" docLength="2003" length="1" offset="1995" starttimestamp="1601998536229" timestamp="703008">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="404" _type="InsertStringCommand" date="Tue Oct 06 08:47:19 PDT 2020" starttimestamp="1601998536229" timestamp="703009" timestamp2="703009">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="405" _type="Insert" date="Tue Oct 06 08:47:19 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2004" docExpressionCount="0" docLength="2004" length="1" offset="1996" starttimestamp="1601998536229" timestamp="703563">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <Command __id="406" _type="InsertStringCommand" date="Tue Oct 06 08:47:19 PDT 2020" starttimestamp="1601998536229" timestamp="703563" timestamp2="703563">
+    <data><![CDATA[S]]></data>
+  </Command>
+  <DocumentChange __id="407" _type="Insert" date="Tue Oct 06 08:47:19 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2005" docExpressionCount="0" docLength="2005" length="1" offset="1997" starttimestamp="1601998536229" timestamp="703733">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="408" _type="InsertStringCommand" date="Tue Oct 06 08:47:19 PDT 2020" starttimestamp="1601998536229" timestamp="703734" timestamp2="703734">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="409" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2006" docExpressionCount="0" docLength="2006" length="1" offset="1998" starttimestamp="1601998536229" timestamp="703852">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <Command __id="410" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="703852" timestamp2="703852">
+    <data><![CDATA[f]]></data>
+  </Command>
+  <DocumentChange __id="411" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2007" docExpressionCount="0" docLength="2007" length="1" offset="1999" starttimestamp="1601998536229" timestamp="703946">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="412" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="703947" timestamp2="703947">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="413" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2008" docExpressionCount="0" docLength="2008" length="1" offset="2000" starttimestamp="1601998536229" timestamp="704198">
+    <text><![CDATA[V]]></text>
+  </DocumentChange>
+  <Command __id="414" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="704199" timestamp2="704199">
+    <data><![CDATA[V]]></data>
+  </Command>
+  <DocumentChange __id="415" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2009" docExpressionCount="0" docLength="2009" length="1" offset="2001" starttimestamp="1601998536229" timestamp="704425">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="416" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="704426" timestamp2="704426">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="417" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2010" docExpressionCount="0" docLength="2010" length="1" offset="2002" starttimestamp="1601998536229" timestamp="704542">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="418" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="704543" timestamp2="704543">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="419" _type="Insert" date="Tue Oct 06 08:47:20 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2011" docExpressionCount="0" docLength="2011" length="1" offset="2003" starttimestamp="1601998536229" timestamp="704735">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="420" _type="InsertStringCommand" date="Tue Oct 06 08:47:20 PDT 2020" starttimestamp="1601998536229" timestamp="704735" timestamp2="704735">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <DocumentChange __id="421" _type="Insert" date="Tue Oct 06 08:47:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2012" docExpressionCount="0" docLength="2012" length="1" offset="2004" starttimestamp="1601998536229" timestamp="704795">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="422" _type="InsertStringCommand" date="Tue Oct 06 08:47:21 PDT 2020" starttimestamp="1601998536229" timestamp="704796" timestamp2="704796">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="423" _type="Insert" date="Tue Oct 06 08:47:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2013" docExpressionCount="0" docLength="2013" length="1" offset="2005" starttimestamp="1601998536229" timestamp="704911">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="424" _type="InsertStringCommand" date="Tue Oct 06 08:47:21 PDT 2020" starttimestamp="1601998536229" timestamp="704911" timestamp2="704911">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="425" _type="Insert" date="Tue Oct 06 08:47:21 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2014" docExpressionCount="0" docLength="2014" length="1" offset="2006" starttimestamp="1601998536229" timestamp="705263">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="426" _type="InsertStringCommand" date="Tue Oct 06 08:47:21 PDT 2020" starttimestamp="1601998536229" timestamp="705264" timestamp2="705264">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <DocumentChange __id="427" _type="Insert" date="Tue Oct 06 08:47:23 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2015" docExpressionCount="0" docLength="2015" length="1" offset="2007" starttimestamp="1601998536229" timestamp="707223">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="428" _type="InsertStringCommand" date="Tue Oct 06 08:47:23 PDT 2020" starttimestamp="1601998536229" timestamp="707224" timestamp2="707224">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="429" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2016" docExpressionCount="0" docLength="2016" length="1" offset="2008" starttimestamp="1601998536229" timestamp="709001">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <Command __id="430" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709002" timestamp2="709002">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <DocumentChange __id="431" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2017" docExpressionCount="0" docLength="2017" length="1" offset="2009" starttimestamp="1601998536229" timestamp="709193">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="432" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709194" timestamp2="709194">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="433" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2018" docExpressionCount="0" docLength="2018" length="1" offset="2010" starttimestamp="1601998536229" timestamp="709308">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="434" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709309" timestamp2="709309">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="435" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2019" docExpressionCount="0" docLength="2019" length="1" offset="2011" starttimestamp="1601998536229" timestamp="709456">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="436" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709457" timestamp2="709457">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="437" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2020" docExpressionCount="0" docLength="2020" length="1" offset="2012" starttimestamp="1601998536229" timestamp="709576">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="438" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709577" timestamp2="709577">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="439" _type="Insert" date="Tue Oct 06 08:47:25 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2021" docExpressionCount="0" docLength="2021" length="1" offset="2013" starttimestamp="1601998536229" timestamp="709597">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="440" _type="InsertStringCommand" date="Tue Oct 06 08:47:25 PDT 2020" starttimestamp="1601998536229" timestamp="709598" timestamp2="709598">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="441" _type="Insert" date="Tue Oct 06 08:47:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2022" docExpressionCount="0" docLength="2022" length="1" offset="2014" starttimestamp="1601998536229" timestamp="709787">
+    <text><![CDATA[c]]></text>
+  </DocumentChange>
+  <Command __id="442" _type="InsertStringCommand" date="Tue Oct 06 08:47:26 PDT 2020" starttimestamp="1601998536229" timestamp="709788" timestamp2="709788">
+    <data><![CDATA[c]]></data>
+  </Command>
+  <DocumentChange __id="443" _type="Delete" date="Tue Oct 06 08:47:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2021" docExpressionCount="0" docLength="2021" endLine="70" length="1" offset="2014" startLine="70" starttimestamp="1601998536229" timestamp="710453">
+    <text><![CDATA[c]]></text>
+  </DocumentChange>
+  <Command __id="444" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:47:26 PDT 2020" starttimestamp="1601998536229" timestamp="710455" />
+  <DocumentChange __id="445" _type="Delete" date="Tue Oct 06 08:47:26 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2020" docExpressionCount="0" docLength="2020" endLine="70" length="1" offset="2013" startLine="70" starttimestamp="1601998536229" timestamp="710672">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="446" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:47:26 PDT 2020" starttimestamp="1601998536229" timestamp="710674" />
+  <DocumentChange __id="447" _type="Delete" date="Tue Oct 06 08:47:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2019" docExpressionCount="0" docLength="2019" endLine="70" length="1" offset="2012" startLine="70" starttimestamp="1601998536229" timestamp="710840">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="448" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:47:27 PDT 2020" starttimestamp="1601998536229" timestamp="710841" />
+  <DocumentChange __id="449" _type="Insert" date="Tue Oct 06 08:47:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2020" docExpressionCount="0" docLength="2020" length="1" offset="2012" starttimestamp="1601998536229" timestamp="711182">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="450" _type="InsertStringCommand" date="Tue Oct 06 08:47:27 PDT 2020" starttimestamp="1601998536229" timestamp="711183" timestamp2="711183">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="451" _type="Insert" date="Tue Oct 06 08:47:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2021" docExpressionCount="0" docLength="2021" length="1" offset="2013" starttimestamp="1601998536229" timestamp="711477">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="452" _type="InsertStringCommand" date="Tue Oct 06 08:47:27 PDT 2020" starttimestamp="1601998536229" timestamp="711478" timestamp2="711478">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="453" _type="Insert" date="Tue Oct 06 08:47:27 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2022" docExpressionCount="0" docLength="2022" length="1" offset="2014" starttimestamp="1601998536229" timestamp="711601">
+    <text><![CDATA[c]]></text>
+  </DocumentChange>
+  <Command __id="454" _type="InsertStringCommand" date="Tue Oct 06 08:47:27 PDT 2020" starttimestamp="1601998536229" timestamp="711602" timestamp2="711602">
+    <data><![CDATA[c]]></data>
+  </Command>
+  <DocumentChange __id="455" _type="Insert" date="Tue Oct 06 08:47:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2023" docExpressionCount="0" docLength="2023" length="1" offset="2015" starttimestamp="1601998536229" timestamp="711795">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="456" _type="InsertStringCommand" date="Tue Oct 06 08:47:28 PDT 2020" starttimestamp="1601998536229" timestamp="711796" timestamp2="711796">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="457" _type="Insert" date="Tue Oct 06 08:47:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2024" docExpressionCount="0" docLength="2024" length="1" offset="2016" starttimestamp="1601998536229" timestamp="711890">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="458" _type="InsertStringCommand" date="Tue Oct 06 08:47:28 PDT 2020" starttimestamp="1601998536229" timestamp="711890" timestamp2="711890">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="459" _type="Insert" date="Tue Oct 06 08:47:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2025" docExpressionCount="0" docLength="2025" length="1" offset="2017" starttimestamp="1601998536229" timestamp="712224">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="460" _type="InsertStringCommand" date="Tue Oct 06 08:47:28 PDT 2020" starttimestamp="1601998536229" timestamp="712224" timestamp2="712224">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="461" _type="Insert" date="Tue Oct 06 08:47:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2026" docExpressionCount="0" docLength="2026" length="1" offset="2018" starttimestamp="1601998536229" timestamp="712475">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <Command __id="462" _type="InsertStringCommand" date="Tue Oct 06 08:47:28 PDT 2020" starttimestamp="1601998536229" timestamp="712475" timestamp2="712475">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <DocumentChange __id="463" _type="Insert" date="Tue Oct 06 08:47:28 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2027" docExpressionCount="0" docLength="2027" length="1" offset="2019" starttimestamp="1601998536229" timestamp="712699">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="464" _type="InsertStringCommand" date="Tue Oct 06 08:47:28 PDT 2020" starttimestamp="1601998536229" timestamp="712700" timestamp2="712700">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <DocumentChange __id="465" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2028" docExpressionCount="0" docLength="2028" length="1" offset="2020" starttimestamp="1601998536229" timestamp="712819">
+    <text><![CDATA[r]]></text>
+  </DocumentChange>
+  <Command __id="466" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="712820" timestamp2="712820">
+    <data><![CDATA[r]]></data>
+  </Command>
+  <DocumentChange __id="467" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2029" docExpressionCount="0" docLength="2029" length="1" offset="2021" starttimestamp="1601998536229" timestamp="712916">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="468" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="712916" timestamp2="712916">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="469" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2030" docExpressionCount="0" docLength="2030" length="1" offset="2022" starttimestamp="1601998536229" timestamp="713044">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="470" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713045" timestamp2="713045">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="471" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2031" docExpressionCount="0" docLength="2031" length="1" offset="2023" starttimestamp="1601998536229" timestamp="713087">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="472" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713088" timestamp2="713088">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="473" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2032" docExpressionCount="0" docLength="2032" length="1" offset="2024" starttimestamp="1601998536229" timestamp="713176">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="474" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713177" timestamp2="713177">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <DocumentChange __id="475" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2033" docExpressionCount="0" docLength="2033" length="1" offset="2025" starttimestamp="1601998536229" timestamp="713244">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="476" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713246" timestamp2="713246">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="477" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2034" docExpressionCount="0" docLength="2034" length="1" offset="2026" starttimestamp="1601998536229" timestamp="713467">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="478" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713468" timestamp2="713468">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="479" _type="Insert" date="Tue Oct 06 08:47:29 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2035" docExpressionCount="0" docLength="2035" length="1" offset="2027" starttimestamp="1601998536229" timestamp="713578">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="480" _type="InsertStringCommand" date="Tue Oct 06 08:47:29 PDT 2020" starttimestamp="1601998536229" timestamp="713579" timestamp2="713579">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="481" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2036" docExpressionCount="0" docLength="2036" length="1" offset="2028" starttimestamp="1601998536229" timestamp="713795">
+    <text><![CDATA[E]]></text>
+  </DocumentChange>
+  <Command __id="482" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="713796" timestamp2="713796">
+    <data><![CDATA[E]]></data>
+  </Command>
+  <DocumentChange __id="483" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2037" docExpressionCount="0" docLength="2037" length="1" offset="2029" starttimestamp="1601998536229" timestamp="713993">
+    <text><![CDATA[x]]></text>
+  </DocumentChange>
+  <Command __id="484" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="713994" timestamp2="713994">
+    <data><![CDATA[x]]></data>
+  </Command>
+  <DocumentChange __id="485" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2038" docExpressionCount="0" docLength="2038" length="1" offset="2030" starttimestamp="1601998536229" timestamp="714081">
+    <text><![CDATA[h]]></text>
+  </DocumentChange>
+  <Command __id="486" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714081" timestamp2="714081">
+    <data><![CDATA[h]]></data>
+  </Command>
+  <DocumentChange __id="487" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2039" docExpressionCount="0" docLength="2039" length="1" offset="2031" starttimestamp="1601998536229" timestamp="714254">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="488" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714255" timestamp2="714255">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="489" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2040" docExpressionCount="0" docLength="2040" length="1" offset="2032" starttimestamp="1601998536229" timestamp="714353">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="490" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714354" timestamp2="714354">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="491" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2041" docExpressionCount="0" docLength="2041" length="1" offset="2033" starttimestamp="1601998536229" timestamp="714436">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="492" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714437" timestamp2="714437">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="493" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2042" docExpressionCount="0" docLength="2042" length="1" offset="2034" starttimestamp="1601998536229" timestamp="714615">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="494" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714616" timestamp2="714616">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="495" _type="Insert" date="Tue Oct 06 08:47:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2043" docExpressionCount="0" docLength="2043" length="1" offset="2035" starttimestamp="1601998536229" timestamp="714751">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="496" _type="InsertStringCommand" date="Tue Oct 06 08:47:30 PDT 2020" starttimestamp="1601998536229" timestamp="714752" timestamp2="714752">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="497" _type="Insert" date="Tue Oct 06 08:47:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2044" docExpressionCount="0" docLength="2044" length="1" offset="2036" starttimestamp="1601998536229" timestamp="714851">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="498" _type="InsertStringCommand" date="Tue Oct 06 08:47:31 PDT 2020" starttimestamp="1601998536229" timestamp="714852" timestamp2="714852">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <DocumentChange __id="499" _type="Insert" date="Tue Oct 06 08:47:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2045" docExpressionCount="0" docLength="2045" length="1" offset="2037" starttimestamp="1601998536229" timestamp="714949">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="500" _type="InsertStringCommand" date="Tue Oct 06 08:47:31 PDT 2020" starttimestamp="1601998536229" timestamp="714950" timestamp2="714950">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="501" _type="Insert" date="Tue Oct 06 08:47:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2046" docExpressionCount="0" docLength="2046" length="1" offset="2038" starttimestamp="1601998536229" timestamp="715809">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="502" _type="InsertStringCommand" date="Tue Oct 06 08:47:32 PDT 2020" starttimestamp="1601998536229" timestamp="715810" timestamp2="715810">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="503" _type="Insert" date="Tue Oct 06 08:47:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2047" docExpressionCount="0" docLength="2047" length="1" offset="2039" starttimestamp="1601998536229" timestamp="716121">
+    <text><![CDATA[)]]></text>
+  </DocumentChange>
+  <Command __id="504" _type="InsertStringCommand" date="Tue Oct 06 08:47:32 PDT 2020" starttimestamp="1601998536229" timestamp="716124" timestamp2="716124">
+    <data><![CDATA[)]]></data>
+  </Command>
+  <Command __id="506" _type="InsertStringCommand" date="Tue Oct 06 08:47:32 PDT 2020" starttimestamp="1601998536229" timestamp="716407" timestamp2="716407">
+    <data><![CDATA[.]]></data>
+  </Command>
+  <Command __id="508" _type="EHExceptionCommand" date="Tue Oct 06 08:47:43 PDT 2020" starttimestamp="1601998536229" timestamp="727338" type="Exception">
+    <outputString><![CDATA[consult('/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl').
+]]></outputString>
+  </Command>
+  <Command __id="509" _type="EHExceptionCommand" date="Tue Oct 06 08:47:43 PDT 2020" starttimestamp="1601998536229" timestamp="727734" type="Exception">
+    <outputString><![CDATA[true.
+
+
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.2.1)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+Warning: /Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl:13:
+Warning:    Singleton variables: [InterPolatedValue]
+Warning: /Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl:13:
+Warning:    Singleton variable in branch: InterPolatedValue
+]]></outputString>
+  </Command>
+  <Command __id="510" _type="EHExceptionCommand" date="Tue Oct 06 08:48:02 PDT 2020" starttimestamp="1601998536229" timestamp="746044" type="Exception">
+    <outputString><![CDATA[:-:-:-listGivenSafe([13,30,30]).
+]]></outputString>
+  </Command>
+  <Command __id="511" _type="EHExceptionCommand" date="Tue Oct 06 08:48:02 PDT 2020" starttimestamp="1601998536229" timestamp="746046" type="Exception">
+    <outputString><![CDATA[
+]]></outputString>
+  </Command>
+  <Command __id="512" _type="EHExceptionCommand" date="Tue Oct 06 08:48:02 PDT 2020" starttimestamp="1601998536229" timestamp="746257" type="Exception">
+    <outputString><![CDATA[false.
+
+]]></outputString>
+  </Command>
+  <Command __id="513" _type="EHExceptionCommand" date="Tue Oct 06 08:48:13 PDT 2020" starttimestamp="1601998536229" timestamp="757455" type="Exception">
+    <outputString><![CDATA[halt(0).
+]]></outputString>
+  </Command>
+  <Command __id="514" _type="EHExceptionCommand" date="Tue Oct 06 08:48:13 PDT 2020" starttimestamp="1601998536229" timestamp="757458" type="Exception">
+    <outputString><![CDATA[
+]]></outputString>
+  </Command>
+  <Command __id="515" _type="MoveCaretCommand" caretOffset="1938" date="Tue Oct 06 08:48:16 PDT 2020" docOffset="1938" starttimestamp="1601998536229" timestamp="760630" />
+  <Command __id="516" _type="MoveCaretCommand" caretOffset="1987" date="Tue Oct 06 08:48:19 PDT 2020" docOffset="1987" starttimestamp="1601998536229" timestamp="763682" />
+  <Command __id="517" _type="ShellCommand" date="Tue Oct 06 08:48:21 PDT 2020" starttimestamp="1601998536229" timestamp="765093" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="518" _type="ShellCommand" date="Tue Oct 06 08:48:44 PDT 2020" starttimestamp="1601998536229" timestamp="788355" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="519" _type="MoveCaretCommand" caretOffset="1962" date="Tue Oct 06 08:48:44 PDT 2020" docOffset="1962" starttimestamp="1601998536229" timestamp="788444" />
+  <DocumentChange __id="505" _type="Insert" date="Tue Oct 06 08:47:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2048" docExpressionCount="0" docLength="2048" length="1" offset="2040" starttimestamp="1601998536229" timestamp="716404">
+    <text><![CDATA[.]]></text>
+  </DocumentChange>
+  <Command __id="520" _type="SelectTextCommand" caretOffset="2041" date="Tue Oct 06 08:48:53 PDT 2020" end="2041" start="1991" starttimestamp="1601998536229" timestamp="796938" />
+  <DocumentChange __id="521" _type="Replace" date="Tue Oct 06 08:49:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="1999" docExpressionCount="0" docLength="1999" endLine="70" insertionLength="1" int_docASTNodeCount="1" int_docActiveCodeLength="1998" int_docExpressionCount="0" int_docLength="1998" length="50" offset="1991" startLine="70" starttimestamp="1601998536229" timestamp="844925">
+    <deletedText><![CDATA[givenSafeValues([Distance, Duration, Exhalation]).]]></deletedText>
+    <insertedText><![CDATA[g]]></insertedText>
+  </DocumentChange>
+  <Command __id="522" _type="InsertStringCommand" date="Tue Oct 06 08:49:41 PDT 2020" starttimestamp="1601998536229" timestamp="844931" timestamp2="844931">
+    <data><![CDATA[g]]></data>
+  </Command>
+  <DocumentChange __id="523" _type="Insert" date="Tue Oct 06 08:49:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2000" docExpressionCount="0" docLength="2000" length="1" offset="1992" starttimestamp="1601998536229" timestamp="845004">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="524" _type="InsertStringCommand" date="Tue Oct 06 08:49:41 PDT 2020" starttimestamp="1601998536229" timestamp="845005" timestamp2="845005">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="525" _type="Insert" date="Tue Oct 06 08:49:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2001" docExpressionCount="0" docLength="2001" length="1" offset="1993" starttimestamp="1601998536229" timestamp="845184">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="526" _type="InsertStringCommand" date="Tue Oct 06 08:49:41 PDT 2020" starttimestamp="1601998536229" timestamp="845185" timestamp2="845185">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <DocumentChange __id="527" _type="Insert" date="Tue Oct 06 08:49:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2002" docExpressionCount="0" docLength="2002" length="1" offset="1994" starttimestamp="1601998536229" timestamp="845384">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="528" _type="InsertStringCommand" date="Tue Oct 06 08:49:41 PDT 2020" starttimestamp="1601998536229" timestamp="845384" timestamp2="845384">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="529" _type="Insert" date="Tue Oct 06 08:49:41 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2003" docExpressionCount="0" docLength="2003" length="1" offset="1995" starttimestamp="1601998536229" timestamp="845494">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="530" _type="InsertStringCommand" date="Tue Oct 06 08:49:41 PDT 2020" starttimestamp="1601998536229" timestamp="845494" timestamp2="845494">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="531" _type="Insert" date="Tue Oct 06 08:49:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2004" docExpressionCount="0" docLength="2004" length="1" offset="1996" starttimestamp="1601998536229" timestamp="845887">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <Command __id="532" _type="InsertStringCommand" date="Tue Oct 06 08:49:42 PDT 2020" starttimestamp="1601998536229" timestamp="845888" timestamp2="845888">
+    <data><![CDATA[S]]></data>
+  </Command>
+  <DocumentChange __id="533" _type="Insert" date="Tue Oct 06 08:49:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2005" docExpressionCount="0" docLength="2005" length="1" offset="1997" starttimestamp="1601998536229" timestamp="846131">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="534" _type="InsertStringCommand" date="Tue Oct 06 08:49:42 PDT 2020" starttimestamp="1601998536229" timestamp="846131" timestamp2="846131">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="535" _type="Insert" date="Tue Oct 06 08:49:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2006" docExpressionCount="0" docLength="2006" length="1" offset="1998" starttimestamp="1601998536229" timestamp="846227">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <Command __id="536" _type="InsertStringCommand" date="Tue Oct 06 08:49:42 PDT 2020" starttimestamp="1601998536229" timestamp="846228" timestamp2="846228">
+    <data><![CDATA[f]]></data>
+  </Command>
+  <DocumentChange __id="537" _type="Insert" date="Tue Oct 06 08:49:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2007" docExpressionCount="0" docLength="2007" length="1" offset="1999" starttimestamp="1601998536229" timestamp="846367">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="538" _type="InsertStringCommand" date="Tue Oct 06 08:49:42 PDT 2020" starttimestamp="1601998536229" timestamp="846368" timestamp2="846368">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="539" _type="Insert" date="Tue Oct 06 08:49:42 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2008" docExpressionCount="0" docLength="2008" length="1" offset="2000" starttimestamp="1601998536229" timestamp="846659">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="540" _type="InsertStringCommand" date="Tue Oct 06 08:49:42 PDT 2020" starttimestamp="1601998536229" timestamp="846659" timestamp2="846659">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <DocumentChange __id="541" _type="Insert" date="Tue Oct 06 08:49:43 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2009" docExpressionCount="0" docLength="2009" length="1" offset="2001" starttimestamp="1601998536229" timestamp="847677">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="542" _type="InsertStringCommand" date="Tue Oct 06 08:49:43 PDT 2020" starttimestamp="1601998536229" timestamp="847678" timestamp2="847678">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <DocumentChange __id="543" _type="Insert" date="Tue Oct 06 08:49:43 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2010" docExpressionCount="0" docLength="2010" length="1" offset="2002" starttimestamp="1601998536229" timestamp="847768">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="544" _type="InsertStringCommand" date="Tue Oct 06 08:49:43 PDT 2020" starttimestamp="1601998536229" timestamp="847769" timestamp2="847769">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="545" _type="Insert" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2011" docExpressionCount="0" docLength="2011" length="1" offset="2003" starttimestamp="1601998536229" timestamp="847888">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="546" _type="InsertStringCommand" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="847889" timestamp2="847889">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="547" _type="Insert" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2012" docExpressionCount="0" docLength="2012" length="1" offset="2004" starttimestamp="1601998536229" timestamp="848045">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="548" _type="InsertStringCommand" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="848045" timestamp2="848045">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <DocumentChange __id="549" _type="Insert" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2013" docExpressionCount="0" docLength="2013" length="1" offset="2005" starttimestamp="1601998536229" timestamp="848191">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="550" _type="InsertStringCommand" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="848193" timestamp2="848193">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="551" _type="Delete" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2012" docExpressionCount="0" docLength="2012" endLine="70" length="1" offset="2005" startLine="70" starttimestamp="1601998536229" timestamp="848414">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="552" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="848415" />
+  <DocumentChange __id="553" _type="Delete" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2011" docExpressionCount="0" docLength="2011" endLine="70" length="1" offset="2004" startLine="70" starttimestamp="1601998536229" timestamp="848591">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="554" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="848593" />
+  <DocumentChange __id="555" _type="Delete" date="Tue Oct 06 08:49:44 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2010" docExpressionCount="0" docLength="2010" endLine="70" length="1" offset="2003" startLine="70" starttimestamp="1601998536229" timestamp="848726">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="556" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:44 PDT 2020" starttimestamp="1601998536229" timestamp="848729" />
+  <DocumentChange __id="557" _type="Delete" date="Tue Oct 06 08:49:45 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2009" docExpressionCount="0" docLength="2009" endLine="70" length="1" offset="2002" startLine="70" starttimestamp="1601998536229" timestamp="848870">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="558" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:45 PDT 2020" starttimestamp="1601998536229" timestamp="848874" />
+  <DocumentChange __id="559" _type="Delete" date="Tue Oct 06 08:49:45 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2008" docExpressionCount="0" docLength="2008" endLine="70" length="1" offset="2001" startLine="70" starttimestamp="1601998536229" timestamp="849008">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="560" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:45 PDT 2020" starttimestamp="1601998536229" timestamp="849015" />
+  <DocumentChange __id="561" _type="Delete" date="Tue Oct 06 08:49:45 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2007" docExpressionCount="0" docLength="2007" endLine="70" length="1" offset="2000" startLine="70" starttimestamp="1601998536229" timestamp="849144">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="562" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:49:45 PDT 2020" starttimestamp="1601998536229" timestamp="849151" />
+  <DocumentChange __id="563" _type="Insert" date="Tue Oct 06 08:49:45 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2008" docExpressionCount="0" docLength="2008" length="1" offset="2000" starttimestamp="1601998536229" timestamp="849562">
+    <text><![CDATA[V]]></text>
+  </DocumentChange>
+  <Command __id="564" _type="InsertStringCommand" date="Tue Oct 06 08:49:45 PDT 2020" starttimestamp="1601998536229" timestamp="849563" timestamp2="849563">
+    <data><![CDATA[V]]></data>
+  </Command>
+  <DocumentChange __id="565" _type="Insert" date="Tue Oct 06 08:49:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2009" docExpressionCount="0" docLength="2009" length="1" offset="2001" starttimestamp="1601998536229" timestamp="849836">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="566" _type="InsertStringCommand" date="Tue Oct 06 08:49:46 PDT 2020" starttimestamp="1601998536229" timestamp="849838" timestamp2="849838">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="567" _type="Insert" date="Tue Oct 06 08:49:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2010" docExpressionCount="0" docLength="2010" length="1" offset="2002" starttimestamp="1601998536229" timestamp="849958">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="568" _type="InsertStringCommand" date="Tue Oct 06 08:49:46 PDT 2020" starttimestamp="1601998536229" timestamp="849959" timestamp2="849959">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="569" _type="Insert" date="Tue Oct 06 08:49:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2011" docExpressionCount="0" docLength="2011" length="1" offset="2003" starttimestamp="1601998536229" timestamp="850087">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="570" _type="InsertStringCommand" date="Tue Oct 06 08:49:46 PDT 2020" starttimestamp="1601998536229" timestamp="850088" timestamp2="850088">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <DocumentChange __id="571" _type="Insert" date="Tue Oct 06 08:49:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2012" docExpressionCount="0" docLength="2012" length="1" offset="2004" starttimestamp="1601998536229" timestamp="850147">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="572" _type="InsertStringCommand" date="Tue Oct 06 08:49:46 PDT 2020" starttimestamp="1601998536229" timestamp="850148" timestamp2="850148">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="573" _type="Insert" date="Tue Oct 06 08:49:46 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2013" docExpressionCount="0" docLength="2013" length="1" offset="2005" starttimestamp="1601998536229" timestamp="850273">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="574" _type="InsertStringCommand" date="Tue Oct 06 08:49:46 PDT 2020" starttimestamp="1601998536229" timestamp="850274" timestamp2="850274">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="575" _type="Insert" date="Tue Oct 06 08:49:55 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2014" docExpressionCount="0" docLength="2014" length="1" offset="2006" starttimestamp="1601998536229" timestamp="858814">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="576" _type="InsertStringCommand" date="Tue Oct 06 08:49:55 PDT 2020" starttimestamp="1601998536229" timestamp="858814" timestamp2="858814">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <DocumentChange __id="577" _type="Insert" date="Tue Oct 06 08:49:56 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2015" docExpressionCount="0" docLength="2015" length="1" offset="2007" starttimestamp="1601998536229" timestamp="860281">
+    <text><![CDATA[H]]></text>
+  </DocumentChange>
+  <Command __id="578" _type="InsertStringCommand" date="Tue Oct 06 08:49:56 PDT 2020" starttimestamp="1601998536229" timestamp="860282" timestamp2="860282">
+    <data><![CDATA[H]]></data>
+  </Command>
+  <DocumentChange __id="579" _type="Insert" date="Tue Oct 06 08:49:56 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2016" docExpressionCount="0" docLength="2016" length="1" offset="2008" starttimestamp="1601998536229" timestamp="860625">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="580" _type="InsertStringCommand" date="Tue Oct 06 08:49:56 PDT 2020" starttimestamp="1601998536229" timestamp="860626" timestamp2="860626">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="581" _type="Insert" date="Tue Oct 06 08:49:57 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2017" docExpressionCount="0" docLength="2017" length="1" offset="2009" starttimestamp="1601998536229" timestamp="860842">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="582" _type="InsertStringCommand" date="Tue Oct 06 08:49:57 PDT 2020" starttimestamp="1601998536229" timestamp="860842" timestamp2="860842">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="583" _type="Insert" date="Tue Oct 06 08:49:58 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2018" docExpressionCount="0" docLength="2018" length="1" offset="2010" starttimestamp="1601998536229" timestamp="861918">
+    <text><![CDATA[d]]></text>
+  </DocumentChange>
+  <Command __id="584" _type="InsertStringCommand" date="Tue Oct 06 08:49:58 PDT 2020" starttimestamp="1601998536229" timestamp="861919" timestamp2="861919">
+    <data><![CDATA[d]]></data>
+  </Command>
+  <DocumentChange __id="585" _type="Insert" date="Tue Oct 06 08:49:58 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2019" docExpressionCount="0" docLength="2019" length="1" offset="2011" starttimestamp="1601998536229" timestamp="862084">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="586" _type="InsertStringCommand" date="Tue Oct 06 08:49:58 PDT 2020" starttimestamp="1601998536229" timestamp="862085" timestamp2="862085">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="587" _type="Insert" date="Tue Oct 06 08:49:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2020" docExpressionCount="0" docLength="2020" length="1" offset="2012" starttimestamp="1601998536229" timestamp="862774">
+    <text><![CDATA[|]]></text>
+  </DocumentChange>
+  <Command __id="588" _type="InsertStringCommand" date="Tue Oct 06 08:49:59 PDT 2020" starttimestamp="1601998536229" timestamp="862775" timestamp2="862775">
+    <data><![CDATA[|]]></data>
+  </Command>
+  <DocumentChange __id="589" _type="Insert" date="Tue Oct 06 08:49:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2021" docExpressionCount="0" docLength="2021" length="1" offset="2013" starttimestamp="1601998536229" timestamp="863106">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="590" _type="InsertStringCommand" date="Tue Oct 06 08:49:59 PDT 2020" starttimestamp="1601998536229" timestamp="863106" timestamp2="863106">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="591" _type="Insert" date="Tue Oct 06 08:49:59 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2022" docExpressionCount="0" docLength="2022" length="1" offset="2014" starttimestamp="1601998536229" timestamp="863570">
+    <text><![CDATA[T]]></text>
+  </DocumentChange>
+  <Command __id="592" _type="InsertStringCommand" date="Tue Oct 06 08:49:59 PDT 2020" starttimestamp="1601998536229" timestamp="863570" timestamp2="863570">
+    <data><![CDATA[T]]></data>
+  </Command>
+  <DocumentChange __id="593" _type="Insert" date="Tue Oct 06 08:50:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2023" docExpressionCount="0" docLength="2023" length="1" offset="2015" starttimestamp="1601998536229" timestamp="864209">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="594" _type="InsertStringCommand" date="Tue Oct 06 08:50:00 PDT 2020" starttimestamp="1601998536229" timestamp="864210" timestamp2="864210">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="595" _type="Insert" date="Tue Oct 06 08:50:00 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2024" docExpressionCount="0" docLength="2024" length="1" offset="2016" starttimestamp="1601998536229" timestamp="864490">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="596" _type="InsertStringCommand" date="Tue Oct 06 08:50:00 PDT 2020" starttimestamp="1601998536229" timestamp="864491" timestamp2="864491">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="597" _type="Insert" date="Tue Oct 06 08:50:01 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2025" docExpressionCount="0" docLength="2025" length="1" offset="2017" starttimestamp="1601998536229" timestamp="864856">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="598" _type="InsertStringCommand" date="Tue Oct 06 08:50:01 PDT 2020" starttimestamp="1601998536229" timestamp="864857" timestamp2="864857">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="599" _type="Insert" date="Tue Oct 06 08:50:02 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2026" docExpressionCount="0" docLength="2026" length="1" offset="2018" starttimestamp="1601998536229" timestamp="866183">
+    <text><![CDATA[)]]></text>
+  </DocumentChange>
+  <Command __id="600" _type="InsertStringCommand" date="Tue Oct 06 08:50:02 PDT 2020" starttimestamp="1601998536229" timestamp="866185" timestamp2="866185">
+    <data><![CDATA[)]]></data>
+  </Command>
+  <DocumentChange __id="601" _type="Insert" date="Tue Oct 06 08:50:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2027" docExpressionCount="0" docLength="2027" length="1" offset="2019" starttimestamp="1601998536229" timestamp="870206">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="602" _type="InsertStringCommand" date="Tue Oct 06 08:50:06 PDT 2020" starttimestamp="1601998536229" timestamp="870208" timestamp2="870208">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="603" _type="Insert" date="Tue Oct 06 08:50:06 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2029" docExpressionCount="0" docLength="2029" length="2" offset="2020" starttimestamp="1601998536229" timestamp="870643">
+    <text><![CDATA[
+	]]></text>
+  </DocumentChange>
+  <Command __id="604" _type="InsertStringCommand" date="Tue Oct 06 08:50:06 PDT 2020" starttimestamp="1601998536229" timestamp="870647" timestamp2="870647">
+    <data><![CDATA[]]></data>
+  </Command>
+  <DocumentChange __id="605" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2030" docExpressionCount="0" docLength="2030" length="1" offset="2022" starttimestamp="1601998536229" timestamp="871805">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="606" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="871805" timestamp2="871805">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="607" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2031" docExpressionCount="0" docLength="2031" length="1" offset="2023" starttimestamp="1601998536229" timestamp="871972">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="608" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="871972" timestamp2="871972">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="609" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2032" docExpressionCount="0" docLength="2032" length="1" offset="2024" starttimestamp="1601998536229" timestamp="872056">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="610" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="872056" timestamp2="872056">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="611" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2033" docExpressionCount="0" docLength="2033" length="1" offset="2025" starttimestamp="1601998536229" timestamp="872219">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="612" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="872220" timestamp2="872220">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="613" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2034" docExpressionCount="0" docLength="2034" length="1" offset="2026" starttimestamp="1601998536229" timestamp="872550">
+    <text><![CDATA[G]]></text>
+  </DocumentChange>
+  <Command __id="614" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="872551" timestamp2="872551">
+    <data><![CDATA[G]]></data>
+  </Command>
+  <DocumentChange __id="615" _type="Insert" date="Tue Oct 06 08:50:08 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2035" docExpressionCount="0" docLength="2035" length="1" offset="2027" starttimestamp="1601998536229" timestamp="872716">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="616" _type="InsertStringCommand" date="Tue Oct 06 08:50:08 PDT 2020" starttimestamp="1601998536229" timestamp="872716" timestamp2="872716">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="617" _type="Insert" date="Tue Oct 06 08:50:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2036" docExpressionCount="0" docLength="2036" length="1" offset="2028" starttimestamp="1601998536229" timestamp="872790">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="618" _type="InsertStringCommand" date="Tue Oct 06 08:50:09 PDT 2020" starttimestamp="1601998536229" timestamp="872791" timestamp2="872791">
+    <data><![CDATA[v]]></data>
+  </Command>
+  <DocumentChange __id="619" _type="Insert" date="Tue Oct 06 08:50:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2037" docExpressionCount="0" docLength="2037" length="1" offset="2029" starttimestamp="1601998536229" timestamp="872962">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="620" _type="InsertStringCommand" date="Tue Oct 06 08:50:09 PDT 2020" starttimestamp="1601998536229" timestamp="872962" timestamp2="872962">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="621" _type="Insert" date="Tue Oct 06 08:50:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2038" docExpressionCount="0" docLength="2038" length="1" offset="2030" starttimestamp="1601998536229" timestamp="873013">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="622" _type="InsertStringCommand" date="Tue Oct 06 08:50:09 PDT 2020" starttimestamp="1601998536229" timestamp="873014" timestamp2="873014">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="623" _type="Insert" date="Tue Oct 06 08:50:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2039" docExpressionCount="0" docLength="2039" length="1" offset="2031" starttimestamp="1601998536229" timestamp="873443">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <Command __id="624" _type="InsertStringCommand" date="Tue Oct 06 08:50:09 PDT 2020" starttimestamp="1601998536229" timestamp="873444" timestamp2="873444">
+    <data><![CDATA[S]]></data>
+  </Command>
+  <DocumentChange __id="625" _type="Insert" date="Tue Oct 06 08:50:09 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2040" docExpressionCount="0" docLength="2040" length="1" offset="2032" starttimestamp="1601998536229" timestamp="873674">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="626" _type="InsertStringCommand" date="Tue Oct 06 08:50:09 PDT 2020" starttimestamp="1601998536229" timestamp="873675" timestamp2="873675">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="627" _type="Insert" date="Tue Oct 06 08:50:10 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2041" docExpressionCount="0" docLength="2041" length="1" offset="2033" starttimestamp="1601998536229" timestamp="873799">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <Command __id="628" _type="InsertStringCommand" date="Tue Oct 06 08:50:10 PDT 2020" starttimestamp="1601998536229" timestamp="873799" timestamp2="873799">
+    <data><![CDATA[f]]></data>
+  </Command>
+  <DocumentChange __id="629" _type="Insert" date="Tue Oct 06 08:50:10 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2042" docExpressionCount="0" docLength="2042" length="1" offset="2034" starttimestamp="1601998536229" timestamp="873908">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="630" _type="InsertStringCommand" date="Tue Oct 06 08:50:10 PDT 2020" starttimestamp="1601998536229" timestamp="873909" timestamp2="873909">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="631" _type="Insert" date="Tue Oct 06 08:50:10 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2043" docExpressionCount="0" docLength="2043" length="1" offset="2035" starttimestamp="1601998536229" timestamp="874187">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="632" _type="InsertStringCommand" date="Tue Oct 06 08:50:10 PDT 2020" starttimestamp="1601998536229" timestamp="874188" timestamp2="874188">
+    <data><![CDATA[(]]></data>
+  </Command>
+  <DocumentChange __id="633" _type="Delete" date="Tue Oct 06 08:50:11 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2042" docExpressionCount="0" docLength="2042" endLine="71" length="1" offset="2035" startLine="71" starttimestamp="1601998536229" timestamp="875543">
+    <text><![CDATA[(]]></text>
+  </DocumentChange>
+  <Command __id="634" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:11 PDT 2020" starttimestamp="1601998536229" timestamp="875545" />
+  <DocumentChange __id="635" _type="Delete" date="Tue Oct 06 08:50:11 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2041" docExpressionCount="0" docLength="2041" endLine="71" length="1" offset="2034" startLine="71" starttimestamp="1601998536229" timestamp="875702">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="636" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:11 PDT 2020" starttimestamp="1601998536229" timestamp="875704" />
+  <DocumentChange __id="637" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2040" docExpressionCount="0" docLength="2040" endLine="71" length="1" offset="2033" startLine="71" starttimestamp="1601998536229" timestamp="875850">
+    <text><![CDATA[f]]></text>
+  </DocumentChange>
+  <Command __id="638" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="875852" />
+  <DocumentChange __id="639" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2039" docExpressionCount="0" docLength="2039" endLine="71" length="1" offset="2032" startLine="71" starttimestamp="1601998536229" timestamp="876012">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="640" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876013" />
+  <DocumentChange __id="641" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2038" docExpressionCount="0" docLength="2038" endLine="71" length="1" offset="2031" startLine="71" starttimestamp="1601998536229" timestamp="876161">
+    <text><![CDATA[S]]></text>
+  </DocumentChange>
+  <Command __id="642" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876163" />
+  <DocumentChange __id="643" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2037" docExpressionCount="0" docLength="2037" endLine="71" length="1" offset="2030" startLine="71" starttimestamp="1601998536229" timestamp="876314">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="644" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876316" />
+  <DocumentChange __id="645" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2036" docExpressionCount="0" docLength="2036" endLine="71" length="1" offset="2029" startLine="71" starttimestamp="1601998536229" timestamp="876459">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="646" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876460" />
+  <DocumentChange __id="647" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2035" docExpressionCount="0" docLength="2035" endLine="71" length="1" offset="2028" startLine="71" starttimestamp="1601998536229" timestamp="876601">
+    <text><![CDATA[v]]></text>
+  </DocumentChange>
+  <Command __id="648" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876602" />
+  <DocumentChange __id="649" _type="Delete" date="Tue Oct 06 08:50:12 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2034" docExpressionCount="0" docLength="2034" endLine="71" length="1" offset="2027" startLine="71" starttimestamp="1601998536229" timestamp="876745">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="650" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:12 PDT 2020" starttimestamp="1601998536229" timestamp="876747" />
+  <DocumentChange __id="651" _type="Delete" date="Tue Oct 06 08:50:13 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2033" docExpressionCount="0" docLength="2033" endLine="71" length="1" offset="2026" startLine="71" starttimestamp="1601998536229" timestamp="876899">
+    <text><![CDATA[G]]></text>
+  </DocumentChange>
+  <Command __id="652" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:13 PDT 2020" starttimestamp="1601998536229" timestamp="876900" />
+  <DocumentChange __id="653" _type="Delete" date="Tue Oct 06 08:50:13 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2032" docExpressionCount="0" docLength="2032" endLine="71" length="1" offset="2025" startLine="71" starttimestamp="1601998536229" timestamp="877065">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="654" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:13 PDT 2020" starttimestamp="1601998536229" timestamp="877066" />
+  <DocumentChange __id="655" _type="Delete" date="Tue Oct 06 08:50:13 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2031" docExpressionCount="0" docLength="2031" endLine="71" length="1" offset="2024" startLine="71" starttimestamp="1601998536229" timestamp="877214">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="656" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:13 PDT 2020" starttimestamp="1601998536229" timestamp="877215" />
+  <DocumentChange __id="657" _type="Delete" date="Tue Oct 06 08:50:13 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2030" docExpressionCount="0" docLength="2030" endLine="71" length="1" offset="2023" startLine="71" starttimestamp="1601998536229" timestamp="877386">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="658" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:13 PDT 2020" starttimestamp="1601998536229" timestamp="877388" />
+  <Command __id="660" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:14 PDT 2020" starttimestamp="1601998536229" timestamp="877831" />
+  <Command __id="661" _type="ShellCommand" date="Tue Oct 06 08:50:26 PDT 2020" starttimestamp="1601998536229" timestamp="889801" type="ECLIPSE_LOST_FOCUS" />
+  <DocumentChange __id="659" _type="Delete" date="Tue Oct 06 08:50:14 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2029" docExpressionCount="0" docLength="2029" endLine="71" length="1" offset="2022" startLine="71" starttimestamp="1601998536229" timestamp="877830">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="662" _type="ShellCommand" date="Tue Oct 06 08:50:29 PDT 2020" starttimestamp="1601998536229" timestamp="892967" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="663" _type="MoveCaretCommand" caretOffset="2022" date="Tue Oct 06 08:50:29 PDT 2020" docOffset="2022" starttimestamp="1601998536229" timestamp="893086" />
+  <DocumentChange __id="664" _type="Insert" date="Tue Oct 06 08:50:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2030" docExpressionCount="0" docLength="2030" length="1" offset="2022" starttimestamp="1601998536229" timestamp="894187">
+    <text><![CDATA[[]]></text>
+  </DocumentChange>
+  <Command __id="665" _type="InsertStringCommand" date="Tue Oct 06 08:50:30 PDT 2020" starttimestamp="1601998536229" timestamp="894188" timestamp2="894188">
+    <data><![CDATA[[]]></data>
+  </Command>
+  <DocumentChange __id="666" _type="Insert" date="Tue Oct 06 08:50:30 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2031" docExpressionCount="0" docLength="2031" length="1" offset="2023" starttimestamp="1601998536229" timestamp="894537">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <Command __id="667" _type="InsertStringCommand" date="Tue Oct 06 08:50:30 PDT 2020" starttimestamp="1601998536229" timestamp="894538" timestamp2="894538">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <DocumentChange __id="668" _type="Insert" date="Tue Oct 06 08:50:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2032" docExpressionCount="0" docLength="2032" length="1" offset="2024" starttimestamp="1601998536229" timestamp="894794">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="669" _type="InsertStringCommand" date="Tue Oct 06 08:50:31 PDT 2020" starttimestamp="1601998536229" timestamp="894795" timestamp2="894795">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <DocumentChange __id="670" _type="Delete" date="Tue Oct 06 08:50:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2031" docExpressionCount="0" docLength="2031" endLine="71" length="1" offset="2024" startLine="71" starttimestamp="1601998536229" timestamp="895477">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="671" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:50:31 PDT 2020" starttimestamp="1601998536229" timestamp="895478" />
+  <DocumentChange __id="672" _type="Insert" date="Tue Oct 06 08:50:31 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2032" docExpressionCount="0" docLength="2032" length="1" offset="2024" starttimestamp="1601998536229" timestamp="895675">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="673" _type="InsertStringCommand" date="Tue Oct 06 08:50:31 PDT 2020" starttimestamp="1601998536229" timestamp="895675" timestamp2="895675">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="674" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2033" docExpressionCount="0" docLength="2033" length="1" offset="2025" starttimestamp="1601998536229" timestamp="895798">
+    <text><![CDATA[s]]></text>
+  </DocumentChange>
+  <Command __id="675" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="895799" timestamp2="895799">
+    <data><![CDATA[s]]></data>
+  </Command>
+  <DocumentChange __id="676" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2034" docExpressionCount="0" docLength="2034" length="1" offset="2026" starttimestamp="1601998536229" timestamp="895941">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="677" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="895942" timestamp2="895942">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="678" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2035" docExpressionCount="0" docLength="2035" length="1" offset="2027" starttimestamp="1601998536229" timestamp="896024">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="679" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896025" timestamp2="896025">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="680" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2036" docExpressionCount="0" docLength="2036" length="1" offset="2028" starttimestamp="1601998536229" timestamp="896194">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="681" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896196" timestamp2="896196">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="682" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2037" docExpressionCount="0" docLength="2037" length="1" offset="2029" starttimestamp="1601998536229" timestamp="896260">
+    <text><![CDATA[c]]></text>
+  </DocumentChange>
+  <Command __id="683" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896261" timestamp2="896261">
+    <data><![CDATA[c]]></data>
+  </Command>
+  <DocumentChange __id="684" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2038" docExpressionCount="0" docLength="2038" length="1" offset="2030" starttimestamp="1601998536229" timestamp="896444">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="685" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896445" timestamp2="896445">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="686" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2039" docExpressionCount="0" docLength="2039" length="1" offset="2031" starttimestamp="1601998536229" timestamp="896532">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="687" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896533" timestamp2="896533">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="688" _type="Insert" date="Tue Oct 06 08:50:32 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2040" docExpressionCount="0" docLength="2040" length="1" offset="2032" starttimestamp="1601998536229" timestamp="896682">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="689" _type="InsertStringCommand" date="Tue Oct 06 08:50:32 PDT 2020" starttimestamp="1601998536229" timestamp="896683" timestamp2="896683">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="690" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2041" docExpressionCount="0" docLength="2041" length="1" offset="2033" starttimestamp="1601998536229" timestamp="896902">
+    <text><![CDATA[D]]></text>
+  </DocumentChange>
+  <Command __id="691" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="896903" timestamp2="896903">
+    <data><![CDATA[D]]></data>
+  </Command>
+  <DocumentChange __id="692" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2042" docExpressionCount="0" docLength="2042" length="1" offset="2034" starttimestamp="1601998536229" timestamp="897068">
+    <text><![CDATA[u]]></text>
+  </DocumentChange>
+  <Command __id="693" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="897069" timestamp2="897069">
+    <data><![CDATA[u]]></data>
+  </Command>
+  <DocumentChange __id="694" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2043" docExpressionCount="0" docLength="2043" length="1" offset="2035" starttimestamp="1601998536229" timestamp="897390">
+    <text><![CDATA[r]]></text>
+  </DocumentChange>
+  <Command __id="695" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="897391" timestamp2="897391">
+    <data><![CDATA[r]]></data>
+  </Command>
+  <DocumentChange __id="696" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2044" docExpressionCount="0" docLength="2044" length="1" offset="2036" starttimestamp="1601998536229" timestamp="897512">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="697" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="897513" timestamp2="897513">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="698" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2045" docExpressionCount="0" docLength="2045" length="1" offset="2037" starttimestamp="1601998536229" timestamp="897664">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="699" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="897665" timestamp2="897665">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="700" _type="Insert" date="Tue Oct 06 08:50:33 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2046" docExpressionCount="0" docLength="2046" length="1" offset="2038" starttimestamp="1601998536229" timestamp="897710">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="701" _type="InsertStringCommand" date="Tue Oct 06 08:50:33 PDT 2020" starttimestamp="1601998536229" timestamp="897711" timestamp2="897711">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="702" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2047" docExpressionCount="0" docLength="2047" length="1" offset="2039" starttimestamp="1601998536229" timestamp="897794">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="703" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="897795" timestamp2="897795">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <DocumentChange __id="704" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2048" docExpressionCount="0" docLength="2048" length="1" offset="2040" starttimestamp="1601998536229" timestamp="897879">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="705" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="897880" timestamp2="897880">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="706" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2049" docExpressionCount="0" docLength="2049" length="1" offset="2041" starttimestamp="1601998536229" timestamp="898095">
+    <text><![CDATA[,]]></text>
+  </DocumentChange>
+  <Command __id="707" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="898096" timestamp2="898096">
+    <data><![CDATA[,]]></data>
+  </Command>
+  <DocumentChange __id="708" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2050" docExpressionCount="0" docLength="2050" length="1" offset="2042" starttimestamp="1601998536229" timestamp="898227">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="709" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="898229" timestamp2="898229">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="710" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2051" docExpressionCount="0" docLength="2051" length="1" offset="2043" starttimestamp="1601998536229" timestamp="898461">
+    <text><![CDATA[E]]></text>
+  </DocumentChange>
+  <Command __id="711" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="898461" timestamp2="898461">
+    <data><![CDATA[E]]></data>
+  </Command>
+  <DocumentChange __id="712" _type="Insert" date="Tue Oct 06 08:50:34 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2052" docExpressionCount="0" docLength="2052" length="1" offset="2044" starttimestamp="1601998536229" timestamp="898679">
+    <text><![CDATA[x]]></text>
+  </DocumentChange>
+  <Command __id="713" _type="InsertStringCommand" date="Tue Oct 06 08:50:34 PDT 2020" starttimestamp="1601998536229" timestamp="898679" timestamp2="898679">
+    <data><![CDATA[x]]></data>
+  </Command>
+  <DocumentChange __id="714" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2053" docExpressionCount="0" docLength="2053" length="1" offset="2045" starttimestamp="1601998536229" timestamp="898782">
+    <text><![CDATA[h]]></text>
+  </DocumentChange>
+  <Command __id="715" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="898783" timestamp2="898783">
+    <data><![CDATA[h]]></data>
+  </Command>
+  <DocumentChange __id="716" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2054" docExpressionCount="0" docLength="2054" length="1" offset="2046" starttimestamp="1601998536229" timestamp="898924">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="717" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="898925" timestamp2="898925">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="718" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2055" docExpressionCount="0" docLength="2055" length="1" offset="2047" starttimestamp="1601998536229" timestamp="899022">
+    <text><![CDATA[l]]></text>
+  </DocumentChange>
+  <Command __id="719" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="899023" timestamp2="899023">
+    <data><![CDATA[l]]></data>
+  </Command>
+  <DocumentChange __id="720" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2056" docExpressionCount="0" docLength="2056" length="1" offset="2048" starttimestamp="1601998536229" timestamp="899139">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="721" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="899140" timestamp2="899140">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="722" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2057" docExpressionCount="0" docLength="2057" length="1" offset="2049" starttimestamp="1601998536229" timestamp="899300">
+    <text><![CDATA[t]]></text>
+  </DocumentChange>
+  <Command __id="723" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="899301" timestamp2="899301">
+    <data><![CDATA[t]]></data>
+  </Command>
+  <DocumentChange __id="724" _type="Insert" date="Tue Oct 06 08:50:35 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2058" docExpressionCount="0" docLength="2058" length="1" offset="2050" starttimestamp="1601998536229" timestamp="899741">
+    <text><![CDATA[i]]></text>
+  </DocumentChange>
+  <Command __id="725" _type="InsertStringCommand" date="Tue Oct 06 08:50:35 PDT 2020" starttimestamp="1601998536229" timestamp="899741" timestamp2="899741">
+    <data><![CDATA[i]]></data>
+  </Command>
+  <DocumentChange __id="726" _type="Insert" date="Tue Oct 06 08:50:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2059" docExpressionCount="0" docLength="2059" length="1" offset="2051" starttimestamp="1601998536229" timestamp="899823">
+    <text><![CDATA[o]]></text>
+  </DocumentChange>
+  <Command __id="727" _type="InsertStringCommand" date="Tue Oct 06 08:50:36 PDT 2020" starttimestamp="1601998536229" timestamp="899824" timestamp2="899824">
+    <data><![CDATA[o]]></data>
+  </Command>
+  <DocumentChange __id="728" _type="Insert" date="Tue Oct 06 08:50:36 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2060" docExpressionCount="0" docLength="2060" length="1" offset="2052" starttimestamp="1601998536229" timestamp="899925">
+    <text><![CDATA[n]]></text>
+  </DocumentChange>
+  <Command __id="729" _type="InsertStringCommand" date="Tue Oct 06 08:50:36 PDT 2020" starttimestamp="1601998536229" timestamp="899926" timestamp2="899926">
+    <data><![CDATA[n]]></data>
+  </Command>
+  <DocumentChange __id="730" _type="Insert" date="Tue Oct 06 08:50:37 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2061" docExpressionCount="0" docLength="2061" length="1" offset="2053" starttimestamp="1601998536229" timestamp="901233">
+    <text><![CDATA[]]]></text>
+  </DocumentChange>
+  <Command __id="731" _type="InsertStringCommand" date="Tue Oct 06 08:50:37 PDT 2020" starttimestamp="1601998536229" timestamp="901235" timestamp2="901235">
+    <data><![CDATA[]]]></data>
+  </Command>
+  <DocumentChange __id="732" _type="Insert" date="Tue Oct 06 08:50:37 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2062" docExpressionCount="0" docLength="2062" length="1" offset="2054" starttimestamp="1601998536229" timestamp="901498">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="733" _type="InsertStringCommand" date="Tue Oct 06 08:50:37 PDT 2020" starttimestamp="1601998536229" timestamp="901500" timestamp2="901500">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="734" _type="Insert" date="Tue Oct 06 08:50:38 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2063" docExpressionCount="0" docLength="2063" length="1" offset="2055" starttimestamp="1601998536229" timestamp="901880">
+    <text><![CDATA[=]]></text>
+  </DocumentChange>
+  <Command __id="735" _type="InsertStringCommand" date="Tue Oct 06 08:50:38 PDT 2020" starttimestamp="1601998536229" timestamp="901881" timestamp2="901881">
+    <data><![CDATA[=]]></data>
+  </Command>
+  <DocumentChange __id="736" _type="Insert" date="Tue Oct 06 08:50:38 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2064" docExpressionCount="0" docLength="2064" length="1" offset="2056" starttimestamp="1601998536229" timestamp="902054">
+    <text><![CDATA[ ]]></text>
+  </DocumentChange>
+  <Command __id="737" _type="InsertStringCommand" date="Tue Oct 06 08:50:38 PDT 2020" starttimestamp="1601998536229" timestamp="902055" timestamp2="902055">
+    <data><![CDATA[ ]]></data>
+  </Command>
+  <DocumentChange __id="738" _type="Insert" date="Tue Oct 06 08:50:39 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2065" docExpressionCount="0" docLength="2065" length="1" offset="2057" starttimestamp="1601998536229" timestamp="903478">
+    <text><![CDATA[H]]></text>
+  </DocumentChange>
+  <Command __id="739" _type="InsertStringCommand" date="Tue Oct 06 08:50:39 PDT 2020" starttimestamp="1601998536229" timestamp="903478" timestamp2="903478">
+    <data><![CDATA[H]]></data>
+  </Command>
+  <DocumentChange __id="740" _type="Insert" date="Tue Oct 06 08:50:39 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2066" docExpressionCount="0" docLength="2066" length="1" offset="2058" starttimestamp="1601998536229" timestamp="903643">
+    <text><![CDATA[e]]></text>
+  </DocumentChange>
+  <Command __id="741" _type="InsertStringCommand" date="Tue Oct 06 08:50:39 PDT 2020" starttimestamp="1601998536229" timestamp="903644" timestamp2="903644">
+    <data><![CDATA[e]]></data>
+  </Command>
+  <DocumentChange __id="742" _type="Insert" date="Tue Oct 06 08:50:39 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2067" docExpressionCount="0" docLength="2067" length="1" offset="2059" starttimestamp="1601998536229" timestamp="903764">
+    <text><![CDATA[a]]></text>
+  </DocumentChange>
+  <Command __id="743" _type="InsertStringCommand" date="Tue Oct 06 08:50:39 PDT 2020" starttimestamp="1601998536229" timestamp="903764" timestamp2="903764">
+    <data><![CDATA[a]]></data>
+  </Command>
+  <DocumentChange __id="744" _type="Insert" date="Tue Oct 06 08:50:40 PDT 2020" docASTNodeCount="1" docActiveCodeLength="2068" docExpressionCount="0" docLength="2068" length="1" offset="2060" starttimestamp="1601998536229" timestamp="903927">
+    <text><![CDATA[d]]></text>
+  </DocumentChange>
+  <Command __id="745" _type="InsertStringCommand" date="Tue Oct 06 08:50:40 PDT 2020" starttimestamp="1601998536229" timestamp="903928" timestamp2="903928">
+    <data><![CDATA[d]]></data>
+  </Command>
+  <Command __id="747" _type="InsertStringCommand" date="Tue Oct 06 08:50:40 PDT 2020" starttimestamp="1601998536229" timestamp="904250" timestamp2="904250">
+    <data><![CDATA[.]]></data>
+  </Command>
+  <Command __id="749" _type="EHExceptionCommand" date="Tue Oct 06 08:50:47 PDT 2020" starttimestamp="1601998536229" timestamp="911578" type="Exception">
+    <outputString><![CDATA[consult('/Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl').
+]]></outputString>
+  </Command>
+  <Command __id="750" _type="EHExceptionCommand" date="Tue Oct 06 08:50:48 PDT 2020" starttimestamp="1601998536229" timestamp="911784" type="Exception">
+    <outputString><![CDATA[true.
+
+
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.2.1)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+Warning: /Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl:13:
+Warning:    Singleton variables: [InterPolatedValue]
+Warning: /Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl:13:
+Warning:    Singleton variable in branch: InterPolatedValue
+Warning: /Users/rupinsharma/Desktop/College/Junior/COMP 524/Assignment2/src/SocialDistance.pl:70:
+Warning:    Singleton variables: [Tail]
+]]></outputString>
+  </Command>
+  <Command __id="751" _type="EHExceptionCommand" date="Tue Oct 06 08:51:00 PDT 2020" starttimestamp="1601998536229" timestamp="923935" type="Exception">
+    <outputString><![CDATA[:-:-:-|listGivenSafe([13,30,30]).
+]]></outputString>
+  </Command>
+  <Command __id="752" _type="EHExceptionCommand" date="Tue Oct 06 08:51:00 PDT 2020" starttimestamp="1601998536229" timestamp="923938" type="Exception">
+    <outputString><![CDATA[
+]]></outputString>
+  </Command>
+  <Command __id="753" _type="EHExceptionCommand" date="Tue Oct 06 08:51:00 PDT 2020" starttimestamp="1601998536229" timestamp="924149" type="Exception">
+    <outputString><![CDATA[false.
+
+]]></outputString>
+  </Command>
+  <Command __id="754" _type="SelectTextCommand" caretOffset="1990" date="Tue Oct 06 08:51:06 PDT 2020" end="2062" start="1990" starttimestamp="1601998536229" timestamp="930583" />
+  <Command __id="756" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:51:07 PDT 2020" starttimestamp="1601998536229" timestamp="930961" />
+  <Command __id="758" _type="EclipseCommand" commandID="eventLogger.styledTextCommand.DELETE_PREVIOUS" date="Tue Oct 06 08:51:07 PDT 2020" starttimestamp="1601998536229" timestamp="931597" />
+  <Command __id="759" _type="ShellCommand" date="Tue Oct 06 08:51:10 PDT 2020" starttimestamp="1601998536229" timestamp="934362" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="760" _type="ShellCommand" date="Tue Oct 06 08:51:31 PDT 2020" starttimestamp="1601998536229" timestamp="955156" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="761" _type="MoveCaretCommand" caretOffset="1990" date="Tue Oct 06 08:51:31 PDT 2020" docOffset="1990" starttimestamp="1601998536229" timestamp="955236" />
+  <Command __id="762" _type="ShellCommand" date="Tue Oct 06 08:51:32 PDT 2020" starttimestamp="1601998536229" timestamp="956613" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="763" _type="ShellCommand" date="Tue Oct 06 08:51:33 PDT 2020" starttimestamp="1601998536229" timestamp="957612" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="764" _type="ShellCommand" date="Tue Oct 06 08:51:34 PDT 2020" starttimestamp="1601998536229" timestamp="957979" type="ECLIPSE_LOST_FOCUS" />
+</Events>
